@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ForgotPassword } from '../interfaces/forgot-password';
 import { ResetPassword } from '../interfaces/reset-password';
+import { Register } from '../interfaces/register';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,9 @@ import { ResetPassword } from '../interfaces/reset-password';
 export class AuthService {
 
 constructor(private _HttpClient:HttpClient) { }
-
+onSignUp(data:Register):Observable<any>{
+return this._HttpClient.post('auth/register',data)
+}
 OnForgotPassword(data:ForgotPassword):Observable<any>{
   return this._HttpClient.post('auth/forgot-password', data)
 }

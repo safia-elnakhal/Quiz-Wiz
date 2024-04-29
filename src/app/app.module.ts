@@ -6,7 +6,9 @@ import { AppComponent } from './app.component';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { GlobalInterceptor } from './core/Interceptor/global.interceptor';
-
+import { SharedModule } from './shared/shared/shared.module';
+import { HttpClientModule } from '@angular/common/http';
+import { ToastrModule } from 'ngx-toastr';
 @NgModule({
   declarations: [
     AppComponent
@@ -14,6 +16,9 @@ import { GlobalInterceptor } from './core/Interceptor/global.interceptor';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    SharedModule,
+    HttpClientModule,
+    ToastrModule.forRoot(),
     NgxSpinnerModule.forRoot({ type: 'cube-transition' })
   ],
   providers: [
