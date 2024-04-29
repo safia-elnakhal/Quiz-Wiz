@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+
 import { RouterLink, RouterLinkActive } from '@angular/router';
+
 
 
 
@@ -10,16 +13,16 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   imports: [
     CommonModule,
     FormsModule,
-    ReactiveFormsModule,
-    RouterLink,
-    RouterLinkActive,
-    
+    ReactiveFormsModule
+
   ],
+
   exports:[
     FormsModule,
     ReactiveFormsModule,
     RouterLink,
     RouterLinkActive,
+
   ]
 
 })
