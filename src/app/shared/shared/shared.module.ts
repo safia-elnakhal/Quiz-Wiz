@@ -3,6 +3,10 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
+import { RouterLink, RouterLinkActive } from '@angular/router';
+
+
+
 
 @NgModule({
   declarations: [],
@@ -12,10 +16,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule
 
   ],
-  exports: [
+
+  exports:[
     FormsModule,
     ReactiveFormsModule,
+    RouterLink,
+    RouterLinkActive,
 
   ]
+
 })
 export class SharedModule { }

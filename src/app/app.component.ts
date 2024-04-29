@@ -11,7 +11,6 @@ export class AppComponent {
   constructor(private spinner: NgxSpinnerService) {
     /** spinner starts on init */
     this.spinner.show();
-
     setTimeout(() => {
       /** spinner ends after 5 seconds */
       this.spinner.hide();
