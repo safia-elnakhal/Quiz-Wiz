@@ -1,75 +1,83 @@
 <section id="login">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-7 col-lg-7 col-sm-12  mt-5">
+            <div class="col-md-7 col-lg-7 col-sm-12  mt-3">
                  <div class="ms-4 mb-2">
                     <img src="../../../../../assets/images/Logo-white.svg" alt="">
                  </div>
-                    <h4 class="ms-4 mt-5 pb-3">Continue your learning journey with QuizWiz!</h4>
+                    <h4 class="ms-4 mt-3 pb-3">Continue your learning journey with QuizWiz!</h4>
                     <div class="ms-4 ">
-                        <button class="btn-icon me-5 text-center">
+                        <button class="btn-icon me-5 text-center"  routerLink="/auth/login" [routerLinkActive]="['active-btn-class']">
                           <i class="fa-solid fa-user pt-2 "></i>
                       
                          <p class="pt-2">Sign In</p> 
                         </button>
-                        <button class="btn-icon text-center">
+                        <button class="btn-icon text-center" routerLink="/auth/register" [routerLinkActive]="['active-btn-class']">
                           <i class="fa-solid fa-user-plus ps-1 pt-2"></i>
                         <p class="pt-2 ">Sign Up</p> 
                         </button>
                     </div>
-                    <div class="auth-form ms-4 mt-5">
+                    <div class="auth-form ms-4 mt-3">
                         <form [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm)">
+                       
                           <div class="my-3 ">
                             <label for="email " class="my-1 ps-2">Registered email address</label>
+                            <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-envelope fs-4"></i></span>
                             <input type="email" class="form-control mb-1" formControlName="email" id="email">
+                           </div>
                             <div *ngIf="loginForm.controls['email'].touched&&loginForm.controls['email'].errors" class=" w-100 ">
-                              <p class="text-danger" *ngIf="loginForm.controls['email'].errors['email']">
+                              <p class="text-error" *ngIf="loginForm.controls['email'].errors['email']">
                                 Email should be valid </p>
-                              <p class="text-danger" *ngIf="loginForm.controls['email'].errors['required']">
+                              <p class="text-error" *ngIf="loginForm.controls['email'].errors['required']">
                                 Email is required</p>
           
                             </div>
                           </div>
-                          <div>
+                          <div class="password">
           
                             <label for="password" class="my-1 ps-2">Password</label>
-                            <div class="position-relative mt-1">
-                                <input 
-                              
-                                type='text'
-                                formControlName="password" id="password"
-                                  class="form-control mb-1 ">
-                              <!-- <input 
-                              
-                              [type]="!showPass ? 'password' : 'text'"
-                              formControlName="password" id="password"
-                                class="form-control mb-1 "> -->
-
-
-                              <!-- <div (click)="showPass = !showPass"> -->
-                                <!-- <span class="eye"><i
-                                    [class]="!showPass ? 'fa-regular fa-eye-slash' : 'fa-regular fa-eye'"></i></span>
-           -->
-                              <!-- </div> -->
-          
+                            <div class="input-group mb-3">
+                              <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-key text-white fs-4"></i></span>
+                              <input type="password"
+                              placeholder="Type your password"
+                               aria-label="Username" 
+                               formControlName="password" 
+                               id="password"
+                                 class="form-control mb-1 "
+                              aria-describedby="basic-addon1">
                             </div>
-                          </div>
-          
-                          <div *ngIf="loginForm.controls['password']?.errors && loginForm.controls['password']?.touched"
+                            
+                            <div *ngIf="loginForm.controls['password']?.errors && loginForm.controls['password']?.touched"
                             class="w-100 ">
-                            <p class="text-danger" *ngIf="loginForm.controls['password']?.errors?.['required']">
+                            <p class="text-error" *ngIf="loginForm.controls['password']?.errors?.['required']">
                               Password is required</p>
-                            <p class="text-danger" *ngIf="loginForm.controls['password']?.errors?.['pattern']">
+                            <p class="text-error" *ngIf="loginForm.controls['password']?.errors?.['pattern']">
                               Password must be contain special character</p>
+                            </div>
+                        
+                          
                           </div>
           
-                          <div class="w-75 text-end pe-2 pt-1 pb-4 ">
-                            <a class="anchor-color" routerLink="/auth/forgot-password">Forget password</a>
-                          </div>
+                        
+                        
+
+                          <div class="pe-2 pt-1 pb-4 my-4 width-sign  " >
+                            <div class="row d-flex justify-content-between ">
+                              <div class="col-md-6 ">
+                                <button class="btn-sign fw-bold" type="submit"> <span>Sign In </span>
+                                  <i class="fa-solid fa-circle-check "></i>
+                                </button>
+                              </div>
+                              <div class="col-md-6 text-end">
+                                <a class="text-decoration-none text-white" routerLink="/auth/forgot-password">Forget password? <span class="text-error text-decoration-underline">click here</span></a>
+                              </div>
+                              </div>
+                            </div>
+                           
+                           
           
-                          <div class="my-3">
-                            <button type="submit">Sign In</button>
-                          </div>
+                       
           
           
           

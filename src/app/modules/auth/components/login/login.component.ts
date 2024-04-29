@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -17,7 +18,7 @@ export class LoginComponent implements OnInit {
   
   })
 
-  constructor() {
+  constructor(private _AuthService:AuthService) {
     
   }
 
@@ -26,7 +27,13 @@ export class LoginComponent implements OnInit {
   }
 
   onLogin(loginForm: FormGroup) {
-    
+    console.log(loginForm.value);
+    this._AuthService.onLogin(loginForm.value).subscribe({
+      next: (res) => {
+        console.log(res.data);
+        
+      }
+    })
     
   }
 }
