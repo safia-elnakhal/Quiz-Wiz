@@ -4,8 +4,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgxSpinnerModule } from 'ngx-spinner';
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { GlobalInterceptor } from './core/Interceptor/global.interceptor';
+import { ToastrModule } from 'ngx-toastr';
+import { SharedModule } from './shared/shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,10 @@ import { GlobalInterceptor } from './core/Interceptor/global.interceptor';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgxSpinnerModule.forRoot({ type: 'cube-transition' })
+    HttpClientModule,
+    NgxSpinnerModule.forRoot({ type: 'cube-transition' }),
+    ToastrModule.forRoot(),
+    SharedModule
   ],
   providers: [
     {
