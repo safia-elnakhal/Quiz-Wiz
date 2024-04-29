@@ -8,6 +8,8 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { GlobalInterceptor } from './core/Interceptor/global.interceptor';
 import { ToastrModule } from 'ngx-toastr';
 import { SharedModule } from './shared/shared/shared.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -16,6 +18,7 @@ import { SharedModule } from './shared/shared/shared.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
     HttpClientModule,
     NgxSpinnerModule.forRoot({ type: 'cube-transition' }),
     ToastrModule.forRoot(),
