@@ -2,4 +2,29 @@
 
 section{
     background-color: $bg-main-color;
+    height: 100vh;
+    img{
+        border-radius: 20px;
+    }
+    h4{
+        color:$third-color ;
+    }
+
+    label,i , p{
+        color: $fourth-color;
+    }
+    label{
+        font-weight: 700;
+    }
+    i{
+        font-size: 3rem;
+    }
+    .btn-icon{
+       // padding: 30px 50px;
+       width:170px ;
+       height: 120px;
+       border: none;
+       border-radius: 10px;
+        background-color: $bg-second-color;
+    }
 }
