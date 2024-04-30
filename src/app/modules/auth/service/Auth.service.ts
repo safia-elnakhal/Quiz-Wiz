@@ -40,7 +40,7 @@ getRole(){
 
 
 
-constructor(private _HttpClient:HttpClient) { }
+
 onSignUp(data:Register):Observable<any>{
 return this._HttpClient.post('auth/register',data)
 }
