@@ -10,8 +10,6 @@ import { GlobalInterceptor } from './core/Interceptor/global.interceptor';
 import { SharedModule } from './shared/shared/shared.module';
 
 import { ToastrModule } from 'ngx-toastr';
-
-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
