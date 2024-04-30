@@ -3,7 +3,6 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ForgotPassword } from '../interfaces/forgot-password';
 import { ResetPassword } from '../interfaces/reset-password';
-
 import { Register } from '../interfaces/register';
 import { jwtDecode } from 'jwt-decode';
 
@@ -36,9 +35,6 @@ getRole(){
   
  
 }
-
-
-
 
 
 onSignUp(data:Register):Observable<any>{
