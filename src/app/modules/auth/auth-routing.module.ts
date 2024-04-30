@@ -8,7 +8,7 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
 
 const routes: Routes = [
 
-  { path: '', component: AuthComponent },
+  { path: '', component: LoginComponent },
   {path:'login', component:LoginComponent},
   {path: 'resetpassword', component: ResetPasswordComponent},
   {path: 'forgotpassword', component: ForgotPasswordComponent}
