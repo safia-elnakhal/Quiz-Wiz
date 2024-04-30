@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterLink, RouterLinkActive } from '@angular/router';
@@ -17,7 +16,6 @@ import { SidebarComponent } from './sidebar/sidebar.component';
   ],
   imports: [
     CommonModule,
-
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
@@ -26,23 +24,18 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     ReactiveFormsModule,
     RouterLink,
     RouterLinkActive,
-   MatSelectModule
+    MatSelectModule
   ],
 
-
- 
- 
 
   exports:[
  
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-
-
-    
+    NavbarComponent,
+    SidebarComponent,
     RouterLinkActive,
- 
     MatSelectModule
   
 
