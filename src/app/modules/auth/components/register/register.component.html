@@ -1,5 +1,5 @@
 <section id="register" class="register">
-<div class="container-fluid">
+<div class="container">
     <div class="logo pt-5">
        <img src="../../../../../assets/images/logo-white.png">
     </div>
@@ -8,13 +8,14 @@
             <h5 class="pt-4 main-style">Create your account and start using QuizWiz!</h5>
             <div class="pt-2">
             <div class="text-white text-center float-start userIcon sign-icon myPointer">
-              <a [routerLink]="['/auth/login']" class="text-white"><i class="fa-solid fa-user fa-2x p-2"></i></a>
+              <a [routerLink]="['/auth/login']"  [routerLinkActive]="['active-btn-class']"
+              class="text-white"><i class="fa-solid fa-user fa-2x p-2"></i></a>
             <br><p class="">Sign in</p>
             </div>
            
-            <div class="text-white text-center float-start ms-4 userIcon sign-icon myPointer">
-                <i class="fa-solid fa-user-plus fa-2x p-2"></i>
-                <br><p class="">Sign up</p>
+            <div class="text-white text-center float-start ms-4 userIcon sign-icon myPointer" >
+              <a [routerLink]="['/auth/register']"  [routerLinkActive]="['active-btn-class']"
+              class="text-white"><i class="fa-solid fa-user-plus fa-2x p-2"></i> </a>                <br><p class="">Sign up</p>
               
                 </div>
             </div>
