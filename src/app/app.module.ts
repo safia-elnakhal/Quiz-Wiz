@@ -6,12 +6,10 @@ import { AppComponent } from './app.component';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { GlobalInterceptor } from './core/Interceptor/global.interceptor';
-
 import { SharedModule } from './shared/shared/shared.module';
-import { HttpClientModule } from '@angular/common/http';
+
+
 import { ToastrModule } from 'ngx-toastr';
-
-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 

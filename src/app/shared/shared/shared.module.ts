@@ -19,21 +19,24 @@ import {MatSelectModule} from '@angular/material/select';
     ReactiveFormsModule,
     RouterLink,
     RouterLinkActive,
+    ReactiveFormsModule,
+    RouterLink,
+    RouterLinkActive,
    MatSelectModule
   ],
-  exports:[
-    
 
-  ],
+
+ 
+ 
 
   exports:[
  
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
-    FormsModule,
     ReactiveFormsModule,
-    RouterLink,
+
+
+    
     RouterLinkActive,
  
     MatSelectModule

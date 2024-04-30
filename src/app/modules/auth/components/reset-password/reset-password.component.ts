@@ -1,9 +1,11 @@
+
 import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { AuthService } from '../../service/Auth.service';
+
 import { HelperService } from 'src/app/shared/helper/Helper.service';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-reset-password',
@@ -13,7 +15,9 @@ import { HelperService } from 'src/app/shared/helper/Helper.service';
 export class ResetPasswordComponent {
   hide:boolean=true;
   hiden:boolean=true;
-  constructor(private _AuthService:AuthService,private _Router:Router,private _helper:HelperService,private _ToastrService: ToastrService){}
+  constructor(private _AuthService: AuthService,
+    private _Router: Router, private _helper: HelperService,
+    private _ToastrService: ToastrService) { }
   ngOnInit(): void {
     
   }

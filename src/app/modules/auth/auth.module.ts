@@ -10,15 +10,12 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
 
 import { RegisterComponent } from './components/register/register.component';
-import { SharedModule } from 'src/app/shared/shared/shared.module';
 
 
 @NgModule({
   declarations: [
     AuthComponent,
-
     LoginComponent,
-
     ForgotPasswordComponent,
 
     ResetPasswordComponent,

@@ -1,20 +1,21 @@
 <section id="register" class="register">
 <div class="container">
-    <div class="logo pt-5">
-       <img src="../../../../../assets/images/Logo-white.png">
+    <div class="logo pt-1">
+       <img src="../../../../../assets/images/logo-white.png">
     </div>
     <div class="row">
         <div class="col-md-6">
             <h5 class="pt-4 main-style">Create your account and start using QuizWiz!</h5>
             <div class="pt-2">
             <div class="text-white text-center float-start userIcon sign-icon myPointer">
-              <a [routerLink]="['/auth/login']" class="text-white"><i class="fa-solid fa-user fa-2x p-2"></i></a>
+              <a [routerLink]="['/auth/login']"  [routerLinkActive]="['active-btn-class']"
+              class="text-white"><i class="fa-solid fa-user fa-2x p-2"></i></a>
             <br><p class="">Sign in</p>
             </div>
            
-            <div class="text-white text-center float-start ms-4 userIcon sign-icon myPointer">
-                <i class="fa-solid fa-user-plus fa-2x p-2"></i>
-                <br><p class="">Sign up</p>
+            <div class="text-white text-center float-start ms-4 userIcon sign-icon myPointer" >
+              <a [routerLink]="['/auth/register']"  [routerLinkActive]="['active-btn-class']"
+              class="text-white"><i class="fa-solid fa-user-plus fa-2x p-2"></i> </a><br><p class="">Sign up</p>
               
                 </div>
             </div>
@@ -41,7 +42,6 @@
                 </div>
                 <label class="text-white">Your email address</label>
                 <div class="input-group mb-3">
-                   
                     <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-envelope text-white"></i></span>
                     <input type="email" class="form-control text-white" formControlName="email" placeholder="Type your email">
                     <div *ngIf="registerForm.controls['email'].errors&&registerForm.controls['email'].touched" class="w-100">
@@ -78,8 +78,8 @@
                   <button class="main" [disabled]="registerForm.invalid">Sign Up<i class="fa-solid fa-circle-check p-1 fa-1x"></i></button>
             </form>
         </div>
-        <div class="col-md-6 text-end">
-          <img src="../../../../../assets/images/Image.png" class="ms-5 w-75">
+        <div class="col-md-6 d-flex justify-content-end">
+      <img src="../../../../../assets/images/auth-photo.png" class="">
         </div>
     </div>
 </div>

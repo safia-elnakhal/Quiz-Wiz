@@ -1,6 +1,8 @@
+@import"../../../../../assets/styles/abstracts/variables";
 #register{
     background-color: rgba(13, 19, 33, 1) !important;
-    height: 100vh;
+     background-position: center center;
+     height: 100vh;
     .logo{
         font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
     }
@@ -42,10 +44,21 @@ input::placeholder{
     top:7px;
     right: 7px;
 }
-.sign-icon:hover{
-    border: solid 5px rgba(197, 216, 109, 1);
+.active-btn-class{
+    div{
+        border: 5px solid $third-color;
+    }
+   
+  
+    i{
+     color:  $third-color !important;
+    }
+     
+ }
+// .sign-icon:hover{
+//     border: solid 5px rgba(197, 216, 109, 1);
 
-}
-.sign-icon i:hover{
-    color:rgba(197, 216, 109, 1);
-}
+// }
+// .sign-icon i:hover{
+//     color:rgba(197, 216, 109, 1);
+// }
