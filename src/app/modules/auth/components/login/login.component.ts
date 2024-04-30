@@ -34,12 +34,16 @@ export class LoginComponent implements OnInit {
     console.log(loginForm.value);
     this._AuthService.onLogin(loginForm.value).subscribe({
       next: (res) => {
+    
         console.log(res.data);
+        localStorage.setItem('userToken', res.data.accessToken);
+        localStorage.setItem('userRole', res.data.profile.role)
+        this._AuthService.getProfile();
         
       }, error: (err) => {
         this._ToastrService.error('Login Failed','Failed')
       }, complete: () => {
-        this._Router.navigateByUrl('/')
+        this._Router.navigateByUrl('/dashboard')
         this._ToastrService.success('Login Successfully', 'Success')
         
       }

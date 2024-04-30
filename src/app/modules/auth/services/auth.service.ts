@@ -21,19 +21,19 @@ export class AuthService {
    getProfile(){
     let encoded:any=localStorage.getItem('userToken');
     console.log(encoded);
-    let decoded:any=jwtDecode(encoded);
-    localStorage.setItem('userRole',decoded.role);
-    localStorage.setItem('userName',decoded.first_name)
-    console.log(decoded)
-    this.getRole();
+    // let decoded:any=jwtDecode(encoded);
+    // localStorage.setItem('userRole',decoded.profile.role);
+    // localStorage.setItem('userName',decoded.first_name)
+    // console.log(decoded)
+   // this.getRole();
   }
-  getRole(){
-    if(localStorage.getItem('userToken')!==null && localStorage.getItem('userRole')!==null){
-      this.role = localStorage.getItem('userRole') 
-    }
+  // getRole(){
+  //   if(localStorage.getItem('userToken')!==null && localStorage.getItem('userRole')!==null){
+  //     this.role = localStorage.getItem('userRole') 
+  //   }
     
    
-  }
+  // }
   
   
   
