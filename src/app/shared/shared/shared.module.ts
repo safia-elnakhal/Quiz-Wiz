@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
+import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
-
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import {MatSelectModule} from '@angular/material/select';
 
 
 
@@ -12,16 +13,31 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   declarations: [],
   imports: [
     CommonModule,
-    FormsModule,
-    ReactiveFormsModule
 
-  ],
-
-  exports:[
+    HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
     RouterLink,
     RouterLinkActive,
+   MatSelectModule
+  ],
+  exports:[
+    
+
+  ],
+
+  exports:[
+ 
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    RouterLink,
+    RouterLinkActive,
+ 
+    MatSelectModule
+  
 
   ]
 

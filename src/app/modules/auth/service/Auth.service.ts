@@ -3,7 +3,10 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ForgotPassword } from '../interfaces/forgot-password';
 import { ResetPassword } from '../interfaces/reset-password';
+
+import { Register } from '../interfaces/register';
 import { jwtDecode } from 'jwt-decode';
+
 
 @Injectable({
   providedIn: 'root'
@@ -36,6 +39,11 @@ getRole(){
 
 
 
+
+constructor(private _HttpClient:HttpClient) { }
+onSignUp(data:Register):Observable<any>{
+return this._HttpClient.post('auth/register',data)
+}
 
 OnForgotPassword(data:ForgotPassword):Observable<any>{
   return this._HttpClient.post('auth/forgot-password', data)
