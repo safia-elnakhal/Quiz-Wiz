@@ -5,9 +5,11 @@ import { InstructorsRoutingModule } from './instructors-routing.module';
 import { InstructorsComponent } from './instructors.component';
 
 
+
 @NgModule({
   declarations: [
-    InstructorsComponent
+    InstructorsComponent,
+
   ],
   imports: [
     CommonModule,
