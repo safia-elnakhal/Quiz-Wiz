@@ -1,3 +1,4 @@
+
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -9,11 +10,13 @@ import { InstructorsComponent } from './components/instructors/instructors.compo
 @NgModule({
   declarations: [
     InstructorsComponent,
+    
 
   ],
   imports: [
     CommonModule,
-    InstructorsRoutingModule
+    InstructorsRoutingModule,
+    
   ]
 })
 export class InstructorsModule { }
