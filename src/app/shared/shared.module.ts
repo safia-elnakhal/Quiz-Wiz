@@ -11,6 +11,10 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button';
 
 
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
+import { MatTreeModule } from '@angular/material/tree';
+
 
 @NgModule({
   declarations: [
@@ -25,9 +29,10 @@ import {MatButtonModule} from '@angular/material/button';
     RouterLink,
     RouterLinkActive,
     MatSelectModule,
+    MatTreeModule,
     MatButtonModule,
+    MatIconModule
     MatMenuModule,
-    MatIconModule,
   ],
 
 
@@ -40,12 +45,16 @@ import {MatButtonModule} from '@angular/material/button';
     SidebarComponent,
     RouterLinkActive,
     MatSelectModule,
+    MatTreeModule,
     MatButtonModule,
-    MatMenuModule,
     MatIconModule,
   
 
   ]
 
 })
-export class SharedModule { }
+export class SharedModule {
+//utils==>search
+
+
+ }

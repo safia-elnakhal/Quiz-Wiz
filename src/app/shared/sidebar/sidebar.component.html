@@ -1,1 +1,49 @@
-<p>sidebar works!</p>
+<section class="overflow-auto vh-100">
+    <div class="py-2 text-center">
+        <button class=" style-arrow text-white square" (click)="toggleSidebar()" [ngClass]="isOpened?'togglebtn':'reverse-btn'">
+
+           <i class="fa-solid fa-bars text-dark fs-2 pt-4"></i>
+           <img src="../../../assets/images/Logo-navbar.svg" class="w-75 text-center px-5 mb-3">
+        </button>
+    </div>
+    <ul [ngClass]="isOpened?'text-start':'text-center'">
+        <ng-container *ngFor="let item of Menu">
+            
+         <li *ngIf="item.isActive">
+        <a   [routerLink]="[item.link]"routerLinkActive="bg-main-transparent"class="text-dark">
+            <div class="">
+            <div class="" [ngClass]="isOpened ? 'ps-3' : 'ps-0'">
+                <span><i [class]=item.icon></i></span>
+                <span [ngClass]="isOpened?'d-inline':'d-none'">{{item.text}}</span>
+            </div>
+            </div>
+        </a>
+       </li>
+    </ng-container>
+    </ul>
+
+</section>
+
+<!-- 
+<section>
+    <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
+
+  <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding>
+  
+    <button mat-icon-button disabled></button>
+    {{node.name}}
+  </mat-tree-node>
+
+  <mat-tree-node *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding>
+    <button mat-icon-button matTreeNodeToggle 
+            [attr.aria-label]="'Toggle ' + node.name">
+      <mat-icon class="mat-icon-rtl-mirror ms-4">
+         menu
+      </mat-icon>
+    </button>
+     <hr>
+    {{node.name}}
+  </mat-tree-node>
+</mat-tree>
+
+</section> -->
