@@ -3,7 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { InstructorsComponent } from './instructors.component';
 
 const routes: Routes = [
-  { path: '', component: InstructorsComponent }];
+  { path: '', component: InstructorsComponent }
+
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
