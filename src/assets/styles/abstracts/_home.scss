@@ -1,0 +1,15 @@
+@import"./variables";
+.card{
+    background-color: $bg-btn-color;
+    border:solid rgb(226, 226, 226) 2px;
+}
+.many-card{
+    background-color: $bg-btn-color;
+    border:solid rgb(226, 226, 226) 2px;
+    border-radius: 8px;
+    
+}
+.fa-arrow-right-long {
+
+    color:$third-color;
+}
