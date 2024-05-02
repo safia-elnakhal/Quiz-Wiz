@@ -8,6 +8,10 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 
 
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
+import { MatTreeModule } from '@angular/material/tree';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +28,10 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     ReactiveFormsModule,
     RouterLink,
     RouterLinkActive,
-    MatSelectModule
+    MatSelectModule,
+    MatTreeModule,
+    MatButtonModule,
+    MatIconModule
   ],
 
 
@@ -36,7 +43,10 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     NavbarComponent,
     SidebarComponent,
     RouterLinkActive,
-    MatSelectModule
+    MatSelectModule,
+    MatTreeModule,
+    MatButtonModule,
+    MatIconModule,
   
 
   ]
