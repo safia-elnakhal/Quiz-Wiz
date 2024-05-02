@@ -1,19 +1,19 @@
-<section id="group-list">
-    <div class="container-fluid">
+<section id="group-list py-5">
+    <div class="container">
         <div class="d-flex justify-content-end mb-3">
-            <button class="main"><i class="fa-solid fa-circle-plus pe-2"></i>Add Group</button>
+            <button  class="main"><i class="fa-solid fa-circle-plus pe-2"></i>Add Group</button>
         </div>
         <div class="row border p-3 rounded-3 mb-3">
            <div class="col-12">
             <h3 class="pb-3">Groups List</h3>
             <div class="row">
-                <div class=" col-md-6 card-content mb-3 " *ngFor="let item of tableOfGroupList">
+                <div class=" col-md-5 card-content mb-3 ms-5 me-5" *ngFor="let item of tableOfGroupList">
                     <h5 class="ps-2 pt-2">Group: {{item.name}}</h5>
-                    <span class="ps-2 pt-2">No. of students:{{item.max_students}}</span><span class="float-end pb-4 pe-3"><i class="fa-regular fa-pen-to-square fs-4"></i> <a  class="mypointer text-black"><i class="fa-regular fa-trash-can ps-2 fs-4"></i></a></span>
+                    <span class="ps-2 pt-2">No. of students:{{item.max_students}}</span><span class="float-end pb-4 pe-3"><i  class="fa-regular fa-pen-to-square fs-4"></i> <a  (click)="openDialog(item)" class="mypointer text-black"><i class="fa-regular fa-trash-can ps-2 fs-4"></i></a></span>
                   </div>
-                  <div class="col-md-6 card-content mb-3" *ngFor="let item of tableOfGroupList">
+                  <div class="col-md-5 card-content mb-3 ms-5 me-5" *ngFor="let item of tableOfGroupList">
                       <h5 class="ps-2 pt-2">Group: {{item.name}}</h5>
-                      <span class="ps-2 pt-2">No. of students: {{item.max_students}}</span><span class="float-end pb-4 pe-3"><i class="fa-regular fa-pen-to-square fs-4"></i> <a  class="mypointer text-black"><i class="fa-regular fa-trash-can ps-2 fs-4"></i></a></span>
+                      <span class="ps-2 pt-2">No. of students: {{item.max_students}}</span><span class="float-end pb-4 pe-3"><i class="fa-regular fa-pen-to-square fs-4"></i> <a  class="mypointer text-black"><i  class="fa-regular fa-trash-can ps-2 fs-4"></i></a></span>
                     </div>
             </div>
             
@@ -21,6 +21,5 @@
            
         </div>
     </div>
+
 </section>
-<!-- 
-           -->
