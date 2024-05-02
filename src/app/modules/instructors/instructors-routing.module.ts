@@ -7,7 +7,7 @@ const routes: Routes = [
 
   {path:'', redirectTo:'instructors',pathMatch:'full'},
   {path:'group-list',component:GroupListComponent},
-  // { path: 'instructors', loadChildren: () => import('../instructors/groups/groups.module').then(m => m.GroupsModule) },
+ { path: 'instructors', loadChildren: () => import('../instructors/modules/groups/groups.module').then(m => m.GroupsModule) },
 ];
 
 
