@@ -8,6 +8,7 @@ import { AuthComponent } from './components/auth/auth/auth.component';
 import { RegisterComponent } from './components/register/register.component';
 
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
+import { ChangePasswordComponent } from './components/change-password/change-password.component';
 
 const routes: Routes = [
 
@@ -19,7 +20,8 @@ const routes: Routes = [
 
   {path:'login', component:LoginComponent},
   {path: 'resetpassword', component: ResetPasswordComponent},
-  {path: 'forgotpassword', component: ForgotPasswordComponent}
+  {path: 'forgotpassword', component: ForgotPasswordComponent},
+  {path: 'changepassword', component: ChangePasswordComponent}
 
 
 ];

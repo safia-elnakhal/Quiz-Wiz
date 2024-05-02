@@ -6,6 +6,9 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 import {MatSelectModule} from '@angular/material/select';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import {MatIconModule} from '@angular/material/icon';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatButtonModule} from '@angular/material/button';
 
 
 
@@ -21,10 +24,10 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     ReactiveFormsModule,
     RouterLink,
     RouterLinkActive,
-    ReactiveFormsModule,
-    RouterLink,
-    RouterLinkActive,
-    MatSelectModule
+    MatSelectModule,
+    MatButtonModule,
+    MatMenuModule,
+    MatIconModule,
   ],
 
 
@@ -36,7 +39,10 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     NavbarComponent,
     SidebarComponent,
     RouterLinkActive,
-    MatSelectModule
+    MatSelectModule,
+    MatButtonModule,
+    MatMenuModule,
+    MatIconModule,
   
 
   ]
