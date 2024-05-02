@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { InstructorsComponent } from './instructors.component';
-import { GroupListComponent } from './groups/group-list/group-list.component';
+import { InstructorsComponent } from './components/instructors/instructors.component';
+import { GroupListComponent } from './modules/groups/group-list/group-list.component';
 
 const routes: Routes = [
 

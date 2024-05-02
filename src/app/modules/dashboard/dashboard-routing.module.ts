@@ -1,7 +1,7 @@
 import { studentGuard } from './../../core/Guards/Student-guard/student.guard';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DashboardComponent } from './dashboard.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HomeComponent } from './components/home/home.component';
 import { instructorGuard } from 'src/app/core/Guards/Instructor-guard/instructor.guard';
 

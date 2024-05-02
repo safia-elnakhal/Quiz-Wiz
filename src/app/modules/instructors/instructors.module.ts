@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { InstructorsRoutingModule } from './instructors-routing.module';
-import { InstructorsComponent } from './instructors.component';
+import { InstructorsComponent } from './components/instructors/instructors.component';
 
 
 

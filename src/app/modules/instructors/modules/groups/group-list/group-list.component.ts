@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { GrouplistService } from 'src/app/modules/dashboard/services/grouplist.service';
+import { GrouplistService } from 'src/app/modules/instructors/services/grouplist.service';
 
 import { DeleteGroupComponent } from '../delete-group/delete-group.component';
 @Component({
