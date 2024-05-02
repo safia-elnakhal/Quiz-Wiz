@@ -1,1 +1,25 @@
-<p>sidebar works!</p>
+<section class="overflow-auto vh-100">
+    <div class="py-2 text-center">
+        <button class=" style-arrow text-white square" (click)="toggleSidebar()" [ngClass]="isOpened?'togglebtn':'reverse-btn'">
+           <!-- <i class="fa-solid fa-arrow-left"></i>-->
+           <i class="fa-solid fa-bars text-dark fs-4 "></i>
+           <img src="../../../assets/images/Logo-navbar.svg" class="w-75 text-center px-5">
+        </button>
+    </div>
+    <ul [ngClass]="isOpened?'text-start':'text-center'">
+        <ng-container *ngFor="let item of Menu">
+            
+         <li *ngIf="item.isActive">
+        <a   [routerLink]="[item.link]"routerLinkActive="bg-main-transparent"class="text-dark">
+            <div class="">
+            <div class="" [ngClass]="isOpened ? 'ps-3' : 'ps-0'">
+                <span><i [class]=item.icon></i></span>
+                <span [ngClass]="isOpened?'d-inline':'d-none'">{{item.text}}</span>
+            </div>
+            </div>
+        </a>
+       </li>
+    </ng-container>
+    </ul>
+
+</section>
