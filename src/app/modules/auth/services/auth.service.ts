@@ -50,6 +50,13 @@ export class AuthService {
     console.log(data);
     return this._HttpClient.post('auth/login', data)
   }
+  onLogout(){
+    return this._HttpClient.get('auth/logout')
+  }
+
+  onChangePassword(data: any){
+    return this._HttpClient.post('auth/change-password', data)
+  }
 }
 
 

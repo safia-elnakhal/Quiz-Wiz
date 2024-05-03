@@ -1,1 +1,29 @@
-<p>navbar works!</p>
+
+<section class="backgound">
+    <div class="mt-1">
+      <div class="d-flex justify-content-end align-items-center">
+            <button class="btn border-black text-black rounded-5 fw-bold">Add quiz <i class="fa-regular fa-clock fw-bold"></i></button>
+        <div class="ms-5 padding-style">
+            <h4 class="px-5">{{userName}}</h4>
+            <h6 class="px-5 third-color">{{userRole}} </h6>
+          </div>
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+          <mat-icon> <span class="material-symbols-outlined">
+              expand_more
+            </span></mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item routerLink="/auth/changepassword">
+            <mat-icon><span class="material-symbols-outlined icon">
+                lock_open
+              </span></mat-icon>
+            <span class="">Change password</span>
+          </button>
+          <button mat-menu-item (click)="logOut()">
+            <mat-icon><span class="material-symbols-outlined icon">logout</span></mat-icon>
+            <span class="">Logout</span>
+          </button>
+        </mat-menu>
+      </div>
+    </div>
+  </section>

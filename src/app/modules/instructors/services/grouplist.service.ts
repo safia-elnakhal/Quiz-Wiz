@@ -13,4 +13,7 @@ export class GrouplistService {
   clickDeleteGroup(id:string):Observable<any>{
     return this._HttpClient.delete(`group/${id}`)
   }
+  onAddGroup(data: any): Observable<any>{
+    return this._HttpClient.post('group', data)
+  }
 }

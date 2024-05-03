@@ -6,11 +6,12 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 import {MatSelectModule} from '@angular/material/select';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import {MatDialogModule} from '@angular/material/dialog';
 import {MatIconModule} from '@angular/material/icon';
+import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button';
 import { MatTreeModule } from '@angular/material/tree';
-import {MatMenuModule} from '@angular/material/menu';
+import { MatDialogModule } from '@angular/material/dialog';
+
 @NgModule({
   declarations: [
     NavbarComponent,
@@ -23,15 +24,12 @@ import {MatMenuModule} from '@angular/material/menu';
     ReactiveFormsModule,
     RouterLink,
     RouterLinkActive,
-    ReactiveFormsModule,
-    RouterLink,
-    RouterLinkActive,
     MatSelectModule,
     MatTreeModule,
     MatButtonModule,
-    MatIconModule,
     MatDialogModule,
-    MatMenuModule
+    MatIconModule,
+    MatMenuModule,
   ],
   exports:[
     HttpClientModule,
@@ -46,6 +44,9 @@ import {MatMenuModule} from '@angular/material/menu';
     MatIconModule,
     MatDialogModule,
     MatMenuModule
+
+  
+
   ]
 
 })
