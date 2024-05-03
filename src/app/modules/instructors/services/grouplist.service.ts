@@ -10,6 +10,9 @@ export class GrouplistService {
   getAllGroups():Observable<any>{
    return this._HttpClient.get('group')
   }
+  getAllStudents():Observable<any>{
+    return this._HttpClient.get('student')
+  }
   clickDeleteGroup(id:string):Observable<any>{
     return this._HttpClient.delete(`group/${id}`)
   }
