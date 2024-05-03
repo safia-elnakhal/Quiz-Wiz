@@ -11,7 +11,7 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class GroupListComponent implements OnInit{
   tableOfGroupList:any;
-
+  tableOfStudents:any;
  
   constructor(private _GroupListService: GrouplistService,
     public _Dialog: MatDialog,
@@ -20,6 +20,7 @@ export class GroupListComponent implements OnInit{
 }
 ngOnInit(): void {
   this.getAllGroupList()
+  this.onGetAllStudents()
 }
 getAllGroupList(){
   this._GroupListService.getAllGroups().subscribe({
@@ -83,8 +84,10 @@ openEditGroupDialog(groupData: any): void {
       }
     });
   }
-  openAddGroupDialog() {
+  openAddGroupDialog():void {
+
     const dialogRef = this._Dialog.open(AddEditGroupComponent, {
+
       width: '50%',
       height: "45vh"
     });
@@ -102,6 +105,8 @@ openEditGroupDialog(groupData: any): void {
     
     this._GroupListService.onAddGroup(data).subscribe({
       next: (res) => {
+   
+        this.tableOfStudents=res;
         console.log(res);
         this._Toastr.success('Group', ' Added Group Success');
       },
@@ -131,7 +136,18 @@ openEditGroupDialog(groupData: any): void {
       },
     });
   }
+onGetAllStudents(){
+  this._GroupListService.getAllStudents().subscribe({
+    next:(res)=>{
+      this.tableOfStudents=res;
+          console.log(res)
 
+    },
+    error:(err)=>{
+      console.log(err)
+    }
+  })
+}
 
 
 
