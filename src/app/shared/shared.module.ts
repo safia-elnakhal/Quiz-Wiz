@@ -9,13 +9,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import {MatIconModule} from '@angular/material/icon';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button';
-
-
-import {MatIconModule} from '@angular/material/icon';
-import {MatButtonModule} from '@angular/material/button';
 import { MatTreeModule } from '@angular/material/tree';
 import { MatDialogModule } from '@angular/material/dialog';
-
 
 @NgModule({
   declarations: [
@@ -32,13 +27,11 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatSelectModule,
     MatTreeModule,
     MatButtonModule,
-    MatIconModule
+    MatDialogModule,
+    MatIconModule,
     MatMenuModule,
   ],
-
-
   exports:[
- 
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
@@ -50,11 +43,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatButtonModule,
     MatIconModule,
     MatDialogModule,
-    MatButtonModule,
-    MatDialogModule,
-    MatIconModule,
+    MatMenuModule
 
-    MatButtonModule,
   
 
   ]
