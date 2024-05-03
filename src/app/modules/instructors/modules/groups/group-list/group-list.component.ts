@@ -3,7 +3,6 @@ import { GrouplistService } from 'src/app/modules/instructors/services/grouplist
 import { MAT_DIALOG_DATA, MatDialog, MatDialogRef} from '@angular/material/dialog';
 import { DeleteGroupComponent } from '../delete-group/delete-group.component';
 import { AddEditGroupComponent } from '../add-edit-group/add-edit-group.component';
-import { MatDialog } from '@angular/material/dialog';
 import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-group-list',
@@ -36,7 +35,7 @@ getAllGroupList(){
 }
 openDialog(groupId:string) {
  console.log(groupId)
-  const dialogRef = this.dialog.open(DeleteGroupComponent, {
+  const dialogRef = this._Dialog.open(DeleteGroupComponent, {
    data:groupId
   });
   dialogRef.afterClosed().subscribe(result => {
@@ -61,14 +60,10 @@ openDeleteGroup(id:string){
       this._Toastr.success('The user has been deleted successfully','Success');
      }
   })
-
-
-}
 }
 
-  }
 
-  openEditGroupDialog(groupData: any): void {
+openEditGroupDialog(groupData: any): void {
     console.log(groupData);
     const dialogRef = this._Dialog.open(AddEditGroupComponent, {
       data: groupData,
@@ -139,5 +134,10 @@ openDeleteGroup(id:string){
 
 
 
- }
 
+
+}
+
+
+  
+  
