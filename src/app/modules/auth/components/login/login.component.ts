@@ -37,7 +37,8 @@ export class LoginComponent implements OnInit {
     
         console.log(res.data);
         localStorage.setItem('userToken', res.data.accessToken);
-        localStorage.setItem('userRole', res.data.profile.role)
+        localStorage.setItem('userRole', res.data.profile.role);
+        localStorage.setItem('userName', res.data.profile.first_name);
         this._AuthService.getProfile();
         
       }, error: (err) => {

@@ -47,5 +47,8 @@ OnForgotPassword(data:ForgotPassword):Observable<any>{
 OnResetPassword(data:ResetPassword):Observable<any>{
   return this._HttpClient.post('auth/reset-password', data)
 }
+onLogout(){
+  return this._HttpClient.get('auth/logout')
+}
 
 }
