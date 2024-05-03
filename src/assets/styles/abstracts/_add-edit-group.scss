@@ -1,0 +1,40 @@
+@import"../abstracts/variables";
+
+button{
+    background-color: transparent;
+    border: none;
+}
+section{
+    border-bottom: none;
+}
+.group-set {
+
+border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+.col-border{
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
+}
+// .mat-mdc-dialog-container .mdc-dialog__surface {
+//     /* border-radius: var(--mdc-dialog-container-shape, 10px); */
+
+//     border-bottom-left-radius:none !important;
+//     border-bottom-right-radius: none !important;
+//     border: 10px solid rgba(0, 0, 0, 0.3) !important;
+// }
+.input-group-text{
+    background-color:$second-color ;
+    border-right: none;
+    border-radius: 10px;
+    padding-right: 10px;
+
+}
+.input-group{
+   
+    width: 90%;
+}
+.form-control ,.form-select{
+   
+    border-left: none;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}

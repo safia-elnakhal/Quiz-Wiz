@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 
 import { InstructorsRoutingModule } from './instructors-routing.module';
 import { InstructorsComponent } from './components/instructors/instructors.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 
@@ -16,6 +17,7 @@ import { InstructorsComponent } from './components/instructors/instructors.compo
   imports: [
     CommonModule,
     InstructorsRoutingModule,
+    SharedModule
     
   ]
 })

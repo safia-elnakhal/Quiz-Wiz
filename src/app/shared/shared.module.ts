@@ -11,6 +11,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import { MatTreeModule } from '@angular/material/tree';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 @NgModule({
@@ -47,6 +48,12 @@ import { MatTreeModule } from '@angular/material/tree';
     MatTreeModule,
     MatButtonModule,
     MatIconModule,
+    MatDialogModule,
+    MatButtonModule,
+    MatDialogModule,
+    MatIconModule,
+
+    MatButtonModule,
   
 
   ]
