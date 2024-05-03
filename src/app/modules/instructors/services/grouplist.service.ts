@@ -16,4 +16,7 @@ export class GrouplistService {
   onAddGroup(data: any): Observable<any>{
     return this._HttpClient.post('group', data)
   }
+  onEditGroup(data: any, id:any): Observable<any>{
+    return this._HttpClient.put(`group/${id}`, data)
+  }
 }
