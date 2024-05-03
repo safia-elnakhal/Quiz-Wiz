@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GrouplistService } from 'src/app/modules/instructors/services/grouplist.service';
-
+import { MAT_DIALOG_DATA, MatDialog, MatDialogRef} from '@angular/material/dialog';
 import { DeleteGroupComponent } from '../delete-group/delete-group.component';
 import { AddEditGroupComponent } from '../add-edit-group/add-edit-group.component';
 import { MatDialog } from '@angular/material/dialog';
@@ -12,6 +12,7 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class GroupListComponent implements OnInit{
   tableOfGroupList:any;
+
  
   constructor(private _GroupListService: GrouplistService,
     public _Dialog: MatDialog,
@@ -33,16 +34,38 @@ getAllGroupList(){
     }
   })
 }
-onDeleteGroup(id:string){
+openDialog(groupId:string) {
+ console.log(groupId)
+  const dialogRef = this.dialog.open(DeleteGroupComponent, {
+   data:groupId
+  });
+  dialogRef.afterClosed().subscribe(result => {
+    console.log('The dialog was closed');
+   console.log(result)
+   if(result){
+    this.openDeleteGroup(result)
+   }
+});
+}
+openDeleteGroup(id:string){
   this._GroupListService.clickDeleteGroup(id).subscribe({
-    next:(res)=>{
+     next:(res)=>{
       console.log(res)
-    },
-    error:(err)=>{
+     },
+     error:(err)=>{
       console.log(err)
-    }
-
+      this._Toastr.error('Not deleted this group','Error');
+     },
+     complete:()=>{
+      this.getAllGroupList()
+      this._Toastr.success('The user has been deleted successfully','Success');
+     }
   })
+
+
+}
+}
+
   }
 
   openEditGroupDialog(groupData: any): void {
@@ -117,5 +140,4 @@ onDeleteGroup(id:string){
 
 
  }
-
 

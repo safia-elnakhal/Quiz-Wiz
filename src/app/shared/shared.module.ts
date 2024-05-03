@@ -12,7 +12,6 @@ import {MatButtonModule} from '@angular/material/button';
 import { MatTreeModule } from '@angular/material/tree';
 import { MatDialogModule } from '@angular/material/dialog';
 
-
 @NgModule({
   declarations: [
     NavbarComponent,
@@ -28,13 +27,11 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatSelectModule,
     MatTreeModule,
     MatButtonModule,
+    MatDialogModule,
     MatIconModule,
     MatMenuModule,
   ],
-
-
   exports:[
- 
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
@@ -46,12 +43,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatButtonModule,
     MatIconModule,
     MatDialogModule,
-    MatButtonModule,
-    MatDialogModule,
-    MatIconModule,
-
-    MatButtonModule,
-  
+    MatMenuModule
 
   ]
 
