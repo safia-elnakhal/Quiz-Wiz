@@ -57,7 +57,11 @@ onDeleteGroup(id:string){
       console.log('The dialog was closed');
       console.log(result);
       if (result) {
-        this.editGroup(result, groupData._id);
+        let editdata ={
+          name : result.name,
+          students : result.students
+        }
+        this.editGroup(editdata, groupData._id);
       }
     });
   }
