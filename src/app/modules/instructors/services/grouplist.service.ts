@@ -17,9 +17,10 @@ export class GrouplistService {
     return this._HttpClient.delete(`group/${id}`)
   }
   onAddGroup(data: any): Observable<any>{
-    return this._HttpClient.post('group', data)
+    return this._HttpClient.post('group',{name:data} )
   }
   onEditGroup(data: any, id:any): Observable<any>{
     return this._HttpClient.put(`group/${id}`, data)
   }
 }
+21

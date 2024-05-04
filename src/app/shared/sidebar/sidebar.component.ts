@@ -75,13 +75,19 @@ export class SidebarComponent {
       icon: 'fa-solid fa-people-group fs-4',
       isActive:this.isInstructor()
     },
-
+    {
+      text: 'Students',
+      link: '/dashboard/instructors/student-list',
+      icon: 'fa-solid fa-sheet-plastic fs-4',
+      isActive:this.isInstructor()
+    },
     {
       text: 'Quizzes',
       link: '/dashboard/manager/users',
       icon: 'fa-solid fa-clock-rotate-left fs-4',
       isActive: this.isInstructor()
     },
+   
     {
       text: 'Results',
       link: '/dashboard/manager/projects',

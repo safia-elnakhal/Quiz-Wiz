@@ -19,7 +19,7 @@ export class GroupListComponent implements OnInit{
   
 }
 ngOnInit(): void {
-  this.getAllGroupList()
+  this.getAllGroupList()            
   this.onGetAllStudents()
 }
 getAllGroupList(){
@@ -62,8 +62,6 @@ openDeleteGroup(id:string){
      }
   })
 }
-
-
 openEditGroupDialog(groupData: any): void {
     console.log(groupData);
     const dialogRef = this._Dialog.open(AddEditGroupComponent, {
@@ -89,7 +87,7 @@ openEditGroupDialog(groupData: any): void {
     const dialogRef = this._Dialog.open(AddEditGroupComponent, {
 
       width: '50%',
-      height: "45vh"
+      height: "45vh",
     });
 
     dialogRef.afterClosed().subscribe((result) => {
@@ -99,14 +97,15 @@ openEditGroupDialog(groupData: any): void {
       if (result) {
         this.addGroup(result);
       }
-    });
+    }
+  );
   }
   addGroup(data:any) {
     
     this._GroupListService.onAddGroup(data).subscribe({
       next: (res) => {
    
-        this.tableOfStudents=res;
+        this.tableOfStudents=res.data;
         console.log(res);
         this._Toastr.success('Group', ' Added Group Success');
       },

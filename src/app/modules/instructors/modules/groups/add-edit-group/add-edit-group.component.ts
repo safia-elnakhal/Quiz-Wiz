@@ -22,7 +22,7 @@ ngOnInit(): void {
     this._GroupListService.getAllStudents().subscribe({
       next:(res)=>{
         this.tableOfStudents=res;
-            console.log(res)
+            console.log(this.tableOfStudents)
   
       },
       error:(err)=>{
