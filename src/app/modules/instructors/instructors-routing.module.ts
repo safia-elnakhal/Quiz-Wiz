@@ -10,7 +10,7 @@ const routes: Routes = [
   {path:'group-list',component:GroupListComponent},
   {path:"student-list",component:StudentListComponent},
    { path: 'instructors', loadChildren: () => import('../instructors/modules/groups/groups.module').then(m => m.GroupsModule) },
-   //{ path: 'students', loadChildren: () => import('../instructors/modules/students/students.module').then(m => m.StudentsModule) },
+   { path: 'instructors', loadChildren: () => import('../instructors/modules/students/students.module').then(m => m.StudentsModule) },
 ];
 
 
