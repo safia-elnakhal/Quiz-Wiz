@@ -21,11 +21,11 @@
                         <form [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm)">
                        
                           <div class="my-3 ">
-                            <label for="email " class="my-1 ps-2">Registered email address</label>
-                            <div class="input-group mb-3">
-                            <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-envelope fs-4"></i></span>
-                            <input type="email" class="form-control mb-1" formControlName="email" id="email">
-                           </div>
+                            <label class="text-white">Email address</label>
+                             <div class="input-group mb-3 w-100">
+                              <span class="input-group-text" id="basic-addon1"><i class="fa-regular fa-envelope text-white"></i></span>
+                              <input type="text" class="form-control text-white" formControlName="email" placeholder="Type your email">
+                             </div>
                             <div *ngIf="loginForm.controls['email'].touched&&loginForm.controls['email'].errors" class=" w-100 ">
                               <p class="text-error" *ngIf="loginForm.controls['email'].errors['email']">
                                 Email should be valid </p>
@@ -37,16 +37,14 @@
                           <div class="password">
           
                             <label for="password" class="my-1 ps-2">Password</label>
-                            <div class="input-group mb-3">
-                              <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-key text-white fs-4"></i></span>
-                              <input type="password"
-                              placeholder="Type your password"
-                               aria-label="Username" 
-                               formControlName="password" 
-                               id="password"
-                                 class="form-control mb-1 "
-                              aria-describedby="basic-addon1">
-                            </div>
+                            
+                                <div class="input-group mb-3 w-100">
+                                    <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-lock text-white"></i></span>
+                                    <input [type]="hide?'password':'text'" class="form-control text-white"formControlName="password" placeholder="Type your password">
+                                    <a class="show-password text-white" (click)="this.hide= !this.hide">
+                                        <i class="fa-solid gray" [class]="hide?'fa-eye-slash':'fa-eye'"></i>
+                                    </a>
+                                </div>
                             
                             <div *ngIf="loginForm.controls['password']?.errors && loginForm.controls['password']?.touched"
                             class="w-100 ">
@@ -70,7 +68,7 @@
                                 </button>
                               </div>
                               <div class="col-md-6 text-end">
-                                <a class="text-decoration-none text-white" routerLink="/auth/forgotpassword">Forget password? <span class="text-error text-decoration-underline">click here</span></a>
+                                <a class="text-decoration-none text-white" routerLink="/auth/forgotpassword"> <span class="text-error text-decoration-none">Forget password?</span></a>
                               </div>
                               </div>
                             </div>

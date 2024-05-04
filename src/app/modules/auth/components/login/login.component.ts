@@ -11,6 +11,8 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
+  hide:boolean=true;
+  hiden:boolean=true;
 
   
   loginForm = new FormGroup({

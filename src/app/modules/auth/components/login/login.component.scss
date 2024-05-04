@@ -1,1 +1,20 @@
 @import"../../../../../assets/styles/abstracts/auth";
+
+.show-password{
+    position: absolute;
+    right: 5px;
+    bottom: 4px;
+    transform: translate(-25%, -25%);
+  }
+
+   .btn-sign:hover{
+        
+        background-color: $third-color;
+        padding: 15px 25px;
+        width: 128.69px;
+        height:54.8px ;
+    }
+    .btn-sign:hover span{
+        display: none;
+   
+    }
