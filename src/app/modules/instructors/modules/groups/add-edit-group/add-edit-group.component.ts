@@ -8,6 +8,7 @@ import { GrouplistService } from '../../../services/grouplist.service';
 })
 export class AddEditGroupComponent implements OnInit{
   tableOfStudents: any;
+  myData:any;
 ngOnInit(): void {
   this.onGetAllStudents()
 }
@@ -17,7 +18,12 @@ ngOnInit(): void {
     public dialogRef: MatDialogRef<AddEditGroupComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
   ) {
+    if(!data){
+
+      this.data = {}
+    }
   }
+
   onGetAllStudents(){
     this._GroupListService.getAllStudents().subscribe({
       next:(res)=>{
