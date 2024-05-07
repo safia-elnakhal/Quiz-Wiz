@@ -1,4 +1,24 @@
 @import"../../../../../assets/styles/abstracts/variables";
+@import"../../../../../assets/styles/abstracts/auth";
+
+.show-password{
+    position: absolute;
+    right: 5px;
+    bottom: 4px;
+    transform: translate(-25%, -25%);
+  }
+
+   .btn-sign:hover{
+        
+        background-color: $third-color;
+        padding: 15px 25px;
+        width: 128.69px;
+        height:54.8px ;
+    }
+    .btn-sign:hover span{
+        display: none;
+   
+    }
 #register{
     background-color: rgba(13, 19, 33, 1) !important;
      background-position: center center;
@@ -39,11 +59,7 @@ input::placeholder{
 .myPointer{
     cursor:pointer;
 }
-.show-password{
-    position: absolute;
-    top:7px;
-    right: 7px;
-}
+
 .active-btn-class{
     div{
         border: 5px solid $third-color;

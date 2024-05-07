@@ -1,17 +1,27 @@
 import { Component, OnInit } from '@angular/core';
 import { StudentsService } from '../../../services/students.service';
+import { AddEditStudentComponent } from '../add-edit-student/add-edit-student.component';
+import { StudentList } from '../../../interfaces/student-list';
 import { MatDialog } from '@angular/material/dialog';
 import { ToastrService } from 'ngx-toastr';
 import { DeleteStudentComponent } from '../delete-student/delete-student.component';
+
 @Component({
   selector: 'app-student-list',
   templateUrl: './student-list.component.html',
   styleUrls: ['./student-list.component.scss']
 })
 export class StudentListComponent implements OnInit{
-  tableOfStudentList:any[]=[]
+
+  tableOfStudentList:StudentList[]=[]
+  tableOfStudentListGroup:StudentList[]=[]
+  tableOfStudentListGroupTwo:StudentList[]=[]
+  constructor(private _studentsService:StudentsService,public dialog: MatDialog){ 
+  }
+
   constructor(private _studentsService:StudentsService, public _Dialog: MatDialog,
     private _Toastr:ToastrService){}
+
   ngOnInit(): void {
     this.getAllStudents()
   }
@@ -19,8 +29,9 @@ getAllStudents(){
   this._studentsService.onGetAllStudents().subscribe({
     next:(res)=>{
       this.tableOfStudentList=res.slice(0,5)
+      this.tableOfStudentListGroup=res.slice(15,20)
+      this.tableOfStudentListGroupTwo=res.slice(10,15)
       console.log(this.tableOfStudentList)
-
     },
     error:(err)=>{
       console.log(err)

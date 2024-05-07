@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 })
 export class RegisterComponent implements OnInit{
   hide:boolean=true;
+  selected = 'option2';
 constructor(private _Router:Router,private _AuthService:AuthService,private _Toastr:ToastrService){}
 
 ngOnInit(): void {
@@ -34,6 +35,7 @@ registerUser(data:FormGroup){
     },
     complete:()=>{
      this._Toastr.success('created account suucessfully','Success')
+     this._Router.navigateByUrl('/dashboard')
     }
   })
 }

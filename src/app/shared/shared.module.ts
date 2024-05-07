@@ -11,6 +11,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button';
 import { MatTreeModule } from '@angular/material/tree';
 import { MatDialogModule } from '@angular/material/dialog';
+import {MatTabsModule} from '@angular/material/tabs';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatDialogModule,
     MatIconModule,
     MatMenuModule,
+    MatTabsModule
   ],
   exports:[
     HttpClientModule,
@@ -43,7 +45,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatButtonModule,
     MatIconModule,
     MatDialogModule,
-    MatMenuModule
+    MatMenuModule,
+    MatTabsModule
 
   ]
 

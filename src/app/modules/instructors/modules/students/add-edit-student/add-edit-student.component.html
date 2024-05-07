@@ -1,0 +1,52 @@
+<!--<section id="addStudent" class="">
+    <h2 mat-dialog-title>Add New student</h2>
+<mat-dialog-content>
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-list" style="color: #8391A1;"></i>
+      </span>
+    <input [(ngModel)]="data" type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions class="d-flex justify-content-between">
+  <button mat-button (click)="onNoClick()">Close</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Save</button>
+</mat-dialog-actions>
+</section>-->
+<section id="addStudent" class="">
+    <div class="container">
+        <div class="row group-set ">
+            <div class="col-md-10 ps-3 pt-4 pb-3">
+                <h4 class="ps-4">Add student</h4>
+            </div>
+            <div class="col-md-1 text-center col-border " >
+                <button [mat-dialog-close]="data" cdkFocusInitial class="">
+                    <i class="fa-solid fa-check fs-3 pt-4" ></i>
+                </button>
+         
+            </div>
+            <div class="col-md-1 col-border ">
+                <button (click)="onNoClick()">
+                    <i class="fa-solid fa-xmark fs-3 pt-4"></i>
+                </button>
+    
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-12">
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <div class="input-group mb-4 ">
+                        <span class="input-group-text" id="basic-addon3">Name</span>
+                        <input [(ngModel)]="data.first_name"
+                         type="name" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                      </div>
+                      <div class="input-group mb-4 ">
+                        <span class="input-group-text" id="basic-addon3">Email</span>
+                        <input [(ngModel)]="data.email"
+                         type="name" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                      </div>
+                </div>
+            </div>
+    </div>
+    </div>
+</section>
+

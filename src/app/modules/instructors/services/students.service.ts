@@ -10,7 +10,15 @@ export class StudentsService {
   onGetAllStudents():Observable<any>{
    return this._HttpClient.get('student')
   }
+  onAddNewStudent():Observable<any>{
+    return this._HttpClient.get(`student`)
+  }
+  onEditStudent(data:any,id:any):Observable<any>{
+    return this._HttpClient.put(`student/${id}/${id}`,data)
+
   onDeleteStudent(id:any):Observable<any>{
     return this._HttpClient.delete(`student/${id}`)
+
   }
 }
+//65cf69778f25f1b30030d76b
