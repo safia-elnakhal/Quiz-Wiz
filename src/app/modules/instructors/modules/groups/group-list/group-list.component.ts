@@ -65,7 +65,7 @@ openDeleteGroup(id:string){
 openEditGroupDialog(groupData: any): void {
     console.log(groupData);
     const dialogRef = this._Dialog.open(AddEditGroupComponent, {
-      data: groupData,
+      data: groupData.name,
       width: '50%',
       height: '45vh'
     });
@@ -85,7 +85,7 @@ openEditGroupDialog(groupData: any): void {
   openAddGroupDialog():void {
 
     const dialogRef = this._Dialog.open(AddEditGroupComponent, {
-
+    
       width: '50%',
       height: "45vh",
     });
@@ -93,20 +93,23 @@ openEditGroupDialog(groupData: any): void {
     dialogRef.afterClosed().subscribe((result) => {
       console.log('The dialog was closed');
       console.log(result);
-      
+   
       if (result) {
+        
         this.addGroup(result);
       }
     }
   );
   }
-  addGroup(data:any) {
+  addGroup(data:string) {
     
+    console.log(data)
     this._GroupListService.onAddGroup(data).subscribe({
+      
       next: (res) => {
    
-        this.tableOfStudents=res.data;
-        console.log(res);
+        this.tableOfStudents=res;
+        console.log(this.tableOfStudents);
         this._Toastr.success('Group', ' Added Group Success');
       },
       error: (err) => {

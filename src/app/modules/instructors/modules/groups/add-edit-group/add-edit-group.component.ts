@@ -13,6 +13,7 @@ ngOnInit(): void {
 }
   userName = localStorage.getItem('userName');
   name: string = '';
+  email:string='';
   constructor(private _GroupListService:GrouplistService,
     public dialogRef: MatDialogRef<AddEditGroupComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
