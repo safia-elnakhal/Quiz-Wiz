@@ -16,8 +16,7 @@ export class StudentListComponent implements OnInit{
   tableOfStudentList:StudentList[]=[]
   tableOfStudentListGroup:StudentList[]=[]
   tableOfStudentListGroupTwo:StudentList[]=[]
-  constructor(private _studentsService:StudentsService,public dialog: MatDialog){ 
-  }
+
 
   constructor(private _studentsService:StudentsService, public _Dialog: MatDialog,
     private _Toastr:ToastrService){}
@@ -39,7 +38,7 @@ getAllStudents(){
   })
 }
 
-openDialog(studentId:string) {
+openDialogStudent(studentId:any) {
   console.log(studentId)
    const dialogRef = this._Dialog.open(DeleteStudentComponent, {
     data:studentId
@@ -52,7 +51,7 @@ openDialog(studentId:string) {
     }
  });
  }
- openDeleteGroup(id:string){
+ openDeleteGroup(id:any){
    this._studentsService.onDeleteStudent(id).subscribe({
       next:(res)=>{
        console.log(res)

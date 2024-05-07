@@ -12,7 +12,7 @@ import { DeleteStudentComponent } from './delete-student/delete-student.componen
 @NgModule({
   declarations: [
     StudentListComponent,
-    AddEditStudentComponent
+    AddEditStudentComponent,
     DeleteStudentComponent
   ],
   imports: [

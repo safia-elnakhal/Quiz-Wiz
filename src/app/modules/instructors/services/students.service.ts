@@ -15,10 +15,11 @@ export class StudentsService {
   }
   onEditStudent(data:any,id:any):Observable<any>{
     return this._HttpClient.put(`student/${id}/${id}`,data)
-
+  }
   onDeleteStudent(id:any):Observable<any>{
     return this._HttpClient.delete(`student/${id}`)
 
   }
 }
+
 //65cf69778f25f1b30030d76b
