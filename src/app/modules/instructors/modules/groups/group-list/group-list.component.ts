@@ -85,7 +85,7 @@ openEditGroupDialog(groupData: any): void {
   openAddGroupDialog():void {
 
     const dialogRef = this._Dialog.open(AddEditGroupComponent, {
-
+     
       width: '50%',
       height: "45vh",
     });
