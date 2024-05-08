@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { StudentsService } from '../../../services/students.service';
-import { AddEditStudentComponent } from '../add-edit-student/add-edit-student.component';
 import { StudentList } from '../../../interfaces/student-list';
 import { MatDialog } from '@angular/material/dialog';
 import { ToastrService } from 'ngx-toastr';
