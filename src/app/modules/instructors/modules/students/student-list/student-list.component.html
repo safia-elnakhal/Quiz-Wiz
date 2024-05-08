@@ -42,7 +42,7 @@
                <div class="col-12">
                 <h3 class="pb-3">Students List</h3>
                 <div class="row">
-                    <div class=" col-md-5 card-content mb-3 ms-5 me-5" *ngFor="let item of tableOfStudentListGroup">
+                    <div class=" col-md-5 card-content mb-3 ms-5 me-5" *ngFor="let item of tableOfStudentWithoutGroup">
                         <div class="row">
                             <div class="col-md-3"> 
                                  <img class="picture" src="../../../../../../assets/images/user img.png" alt="">
@@ -52,10 +52,12 @@
                                 <span class="ps-2 pt-2">email: {{item.email}}</span><span class="float-end pb-4 pe-3">
                                     <a  class="mypointer text-black">
                                         <i (click)="openDialogStudent(item)" class="fa-regular fa-trash-can ps-2 fs-4"></i></a></span>
+                                        <a  class="mypointer text-black">
+                                            <i (click)="clickAddGroup(item)" class="fa-regular fa-add ps-2 fs-4"></i></a>
                             </div>
                         </div>
                 </div>
-                <div class=" col-md-5 card-content mb-3 ms-5 me-5" *ngFor="let item of tableOfStudentListGroup">
+                <div class=" col-md-5 card-content mb-3 ms-5 me-5" *ngFor="let item of tableOfStudentWithoutGroup">
                     <div class="row">
                         <div class="col-md-3"> 
                              <img class="picture" src="../../../../../../assets/images/user img.png" alt="">

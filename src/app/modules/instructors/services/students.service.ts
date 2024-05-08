@@ -10,8 +10,12 @@ export class StudentsService {
   onGetAllStudents():Observable<any>{
    return this._HttpClient.get('student')
   }
-  onAddNewStudent():Observable<any>{
-    return this._HttpClient.get(`student`)
+  onGetStudentWithoutGroup():Observable<any>{
+    return this._HttpClient.get('student/without-group')
+
+  }
+  onAddToGroup(id:any):Observable<any>{
+    return this._HttpClient.get(`student/${id}/${id}`)
   }
   onEditStudent(data:any,id:any):Observable<any>{
     return this._HttpClient.put(`student/${id}/${id}`,data)
