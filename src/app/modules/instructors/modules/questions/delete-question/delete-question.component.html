@@ -1,0 +1,26 @@
+<section id="delete-question" class="">
+    <div class="container ">
+       <div class="row group-set">
+        <div class="col-md-10 ps-3 pt-4  pb-3">
+            <h4 class="ps-2">Delete Question?</h4>
+        </div>
+        <div class="col-md-1 text-center col-border " >
+            <button [mat-dialog-close]="data._id"cdkFocusInitial class="">
+                <i class="fa-solid fa-check fs-3 pt-4" ></i>
+            </button>
+     
+        </div>
+        <div class="col-md-1 col-border ">
+            <button (click)="onNoClick()">
+                <i class="fa-solid fa-xmark fs-3 pt-4"></i>
+            </button>
+
+        </div>
+        
+       </div> 
+       <div class="text-center">
+        <img src="../../../../../../assets/images/trash-bin.png" class="w-25">
+        <p>are you sure you want to delete this Group? if you are sure just click on check icon</p>
+    </div>
+    </div>
+</section>
