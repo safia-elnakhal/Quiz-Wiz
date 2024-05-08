@@ -1,1 +1,28 @@
-<p>question-list works!</p>
+<section id="quizList" class="px-4 py-4 border mt-4 rounded p-2">
+    <div class="d-flex justify-content-between m-2">
+        <h3>Bank of Questions</h3><button class=" main"><i class="fa-solid fa-circle-plus pe-2"></i>Add Question</button>
+    </div>
+   
+    <table class="table">
+        <thead class="table-dark">
+            <tr>
+                <th class="col-md-5">Question Title</th>
+                <th class="col-md-2">Question Desc</th>
+                <th class="col-md-2">Question difficulty level</th>
+                <th class="col-md-1">Date</th>
+                <th class="col-md-1">Actions</th>
+              </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of tableOfAllQuestions">
+              
+                <td>{{item.title}}</td>
+                <td>{{item.description}}</td>
+                <td>{{item.difficulty}}</td>
+                <td>12/06/2024</td>
+                <td><a class="myPointer"><i class="fa-solid fa-eye p-1 icon-color"></i></a><a class="myPointer"><i class="fa-solid fa-pen-to-square p-1 icon-color"></i></a><a class="myPointer"><i class="fa-solid fa-trash-can p-1 icon-color"(click)=openDeleteQuestion(item)></i></a></td>
+              </tr>
+
+        </tbody>
+      </table>
+    </section>
