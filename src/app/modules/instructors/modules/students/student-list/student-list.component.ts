@@ -14,7 +14,7 @@ import { DeleteStudentComponent } from '../delete-student/delete-student.compone
 export class StudentListComponent implements OnInit{
 
   tableOfStudentList:StudentList[]=[]
-  tableOfStudentListGroup:StudentList[]=[]
+  tableOfStudentWithoutGroup:StudentList[]=[]
   tableOfStudentListGroupTwo:StudentList[]=[]
 
 
@@ -23,12 +23,12 @@ export class StudentListComponent implements OnInit{
 
   ngOnInit(): void {
     this.getAllStudents()
+    this.getAllstudentWithoutGroup()
   }
 getAllStudents(){
   this._studentsService.onGetAllStudents().subscribe({
     next:(res)=>{
       this.tableOfStudentList=res.slice(0,5)
-      this.tableOfStudentListGroup=res.slice(15,20)
       this.tableOfStudentListGroupTwo=res.slice(10,15)
       console.log(this.tableOfStudentList)
     },
@@ -37,7 +37,27 @@ getAllStudents(){
     }
   })
 }
-
+clickAddGroup(id:any){
+  this._studentsService.onAddToGroup(id).subscribe({
+    next:(res)=>{
+      console.log(res)
+    },
+    error:(err)=>{
+      console.log(err)
+    }
+  })
+}
+getAllstudentWithoutGroup(){
+  this._studentsService.onGetStudentWithoutGroup().subscribe({
+    next:(res)=>{
+      this.tableOfStudentWithoutGroup=res
+      console.log(this.tableOfStudentWithoutGroup)
+    },
+    error:(err)=>{
+      console.log(err)
+    }
+  })
+}
 openDialogStudent(studentId:any) {
   console.log(studentId)
    const dialogRef = this._Dialog.open(DeleteStudentComponent, {
