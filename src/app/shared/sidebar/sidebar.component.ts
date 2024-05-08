@@ -3,8 +3,6 @@ import { MatTreeFlattener, MatTreeFlatDataSource } from '@angular/material/tree'
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/modules/auth/services/auth.service';
 import { FlatTreeControl } from '@angular/cdk/tree';
-
-
 interface Menu{
   text:string;
   link:string;
@@ -82,8 +80,14 @@ export class SidebarComponent {
       isActive:this.isInstructor()
     },
     {
-      text: 'Quizzes',
-      link: '/dashboard/manager/users',
+      text: 'Quizes',
+      link: '/dashboard/instructors/quiz-list',
+      icon: 'fa-solid fa-clock-rotate-left fs-4',
+      isActive: this.isInstructor()
+    },
+    {
+      text: 'Questions',
+      link: '/dashboard/instructors/question-list',
       icon: 'fa-solid fa-clock-rotate-left fs-4',
       isActive: this.isInstructor()
     },
