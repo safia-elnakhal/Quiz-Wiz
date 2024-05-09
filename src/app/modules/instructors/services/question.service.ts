@@ -13,4 +13,7 @@ export class QuestionService {
   onDeleteQuestion(id:string):Observable<any>{
     return this._HttpClient.delete(`question/${id}`)
   }
+  onAddQuestion(data: any): Observable<any>{
+    return this._HttpClient.post('question',data)
+  }
 }

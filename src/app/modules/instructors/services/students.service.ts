@@ -24,6 +24,10 @@ export class StudentsService {
     return this._HttpClient.delete(`student/${id}`)
 
   }
+  onDeleteStudentFromGroup(id:any, idGroup:any):Observable<any>{
+    return this._HttpClient.delete(`student/${id}/${idGroup}`)
+
+  }
 }
 
 //65cf69778f25f1b30030d76b
