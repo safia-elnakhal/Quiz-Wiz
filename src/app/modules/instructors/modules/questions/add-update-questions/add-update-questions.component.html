@@ -1,11 +1,11 @@
-<section id="add-edit-group" class=" ">
+  <section id="add-edit-group" class=" ">
     <div class="container ">
        <div class="row group-set ">
         <div class="col-md-10 ps-3 pt-4  pb-3">
             <h4 class="ps-4">Set up a new Question</h4>
         </div>
         <div class="col-md-1 text-center col-border " >
-            <button [mat-dialog-close]="data" cdkFocusInitial class="">
+            <button [mat-dialog-close]="questionForm.value" cdkFocusInitial class="">
                 <i class="fa-solid fa-check fs-3 pt-4" ></i>
             </button>
      
@@ -17,81 +17,100 @@
 
         </div>
        </div> 
-   
-       <div class="row mt-5">
-        <div class="col-md-12 ">
-            <div class="d-flex flex-column justify-content-center align-items-center">
-                <div class="input-group mb-3 ">
-                    <span class="input-group-text" id="basic-addon3">Title</span>
-                    <input  
-                     type="name" class="form-control" id="basic-url" aria-describedby="basic-addon3">
-                  </div>
+       <form [formGroup]="questionForm" (ngSubmit)="onSubmit(questionForm)">
+        <div class="row mt-5">
+          <div class="col-md-12 ">
+              <div class="d-flex flex-column justify-content-center align-items-center">
                   <div class="input-group mb-3 ">
-                    <label class="input-group-text" for="inputGroupSelect01">Description</label>
-                    <input  
-                    type="name" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                      <span class="input-group-text" id="basic-addon3">Title</span>
+                      <input formControlName="title"
+                       type="name" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                    </div>
+                    <div class="input-group mb-3 ">
+                      <label class="input-group-text" for="inputGroupSelect01">Description</label>
+                      <input formControlName="description"
+                      type="name" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                    </div>
+                    
+              </div>
+              <div formGroupName="options">
+                <div class="row ">
+                  <div class="col-md-6 px-5">
+                      <div class="input-group mb-3 ">
+                          <label class="input-group-text" for="inputGroupSelect01">A</label>
+                          <input formControlName="A"
+                          type="name" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                        </div>
                   </div>
-                  
-            </div>
-            <div class="row ">
-                <div class="col-md-6 px-5">
-                    <div class="input-group mb-3 ">
-                        <label class="input-group-text" for="inputGroupSelect01">A</label>
-                        <input  
-                        type="name" class="form-control" id="basic-url" aria-describedby="basic-addon3">
-                      </div>
+                  <div class="col-md-6">
+                      <div class="input-group mb-3 ">
+                          <label class="input-group-text" for="inputGroupSelect01">B</label>
+                          <input formControlName="B"
+                          type="name" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                        </div>
+                  </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="input-group mb-3 ">
-                        <label class="input-group-text" for="inputGroupSelect01">B</label>
-                        <input  
-                        type="name" class="form-control" id="basic-url" aria-describedby="basic-addon3">
-                      </div>
+                <div class="row ">
+                  <div class="col-md-6  px-5">
+                      <div class="input-group mb-3 ">
+                          <label class="input-group-text" for="inputGroupSelect01">C</label>
+                          <input formControlName="C" 
+                          type="name" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                        </div>
+                  </div>
+                  <div class="col-md-6">
+                      <div class="input-group mb-3 ">
+                          <label class="input-group-text" for="inputGroupSelect01">D</label>
+                          <input formControlName="D"
+                          type="name" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                        </div>
+                  </div>
                 </div>
+                
               </div>
-              <div class="row ">
-                <div class="col-md-6  px-5">
-                    <div class="input-group mb-3 ">
-                        <label class="input-group-text" for="inputGroupSelect01">C</label>
-                        <input  
-                        type="name" class="form-control" id="basic-url" aria-describedby="basic-addon3">
-                      </div>
+              
+     
+                <div class="row ">
+                  <div class="col-md-4 px-5">
+                      <div class="input-group mb-3">
+                          <label class="input-group-text" for="inputGroupSelect01">Answer</label>
+                          <input formControlName="answer" 
+                          type="name" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                        </div>
+                  </div>
+                  <div class="col-md-4 ">
+                      <div class="input-group mb-3 ">
+                          <label class="input-group-text" for="inputGroupSelect01">Difficulty</label>
+                          <select formControlName="difficulty">
+                            <option value="">Select</option>
+                            <option value="easy">Easy</option>
+                            <option value="medium">Medium</option>
+                            <option value="hard">Hard</option>
+                          </select>
+                          
+                        </div>
+                  </div>
+                  <div class="col-md-4 ">
+                      <div class="input-group mb-3 ">
+                          <label class="input-group-text" for="inputGroupSelect01">Type</label>
+                          <select  formControlName="type">
+                            <option value="">Select</option>
+                            <option value="BE">BE</option>
+                            <option value="FE">FE</option>
+                            <option value="AI">AI</option>
+                            <option value="ML">ML</option>
+                            <option value="DL">DL</option>
+                          </select>
+                        </div>
+                  </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="input-group mb-3 ">
-                        <label class="input-group-text" for="inputGroupSelect01">D</label>
-                        <input  
-                        type="name" class="form-control" id="basic-url" aria-describedby="basic-addon3">
-                      </div>
-                </div>
-              </div>
+          </div>
+      
+         </div>
+
+       </form>
    
-              <div class="row ">
-                <div class="col-md-4 px-5">
-                    <div class="input-group mb-3">
-                        <label class="input-group-text" for="inputGroupSelect01">Answer</label>
-                        <input  
-                        type="name" class="form-control" id="basic-url" aria-describedby="basic-addon3">
-                      </div>
-                </div>
-                <div class="col-md-4 ">
-                    <div class="input-group mb-3 ">
-                        <label class="input-group-text" for="inputGroupSelect01">Difficulty</label>
-                        <input  
-                        type="name" class="form-control" id="basic-url" aria-describedby="basic-addon3">
-                      </div>
-                </div>
-                <div class="col-md-4 ">
-                    <div class="input-group mb-3 ">
-                        <label class="input-group-text" for="inputGroupSelect01">Type</label>
-                        <input  
-                        type="name" class="form-control" id="basic-url" aria-describedby="basic-addon3">
-                      </div>
-                </div>
-              </div>
-        </div>
-    
-       </div>
+       
     </div>
   
 
