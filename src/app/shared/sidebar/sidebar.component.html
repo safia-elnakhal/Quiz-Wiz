@@ -1,25 +1,30 @@
 <section class="overflow-auto vh-100">
-    <div class="py-2 text-center">
+    <div class=" text-center height-side">
         <button class=" style-arrow text-white square" (click)="toggleSidebar()" [ngClass]="isOpened?'togglebtn':'reverse-btn'">
-
-           <i class="fa-solid fa-bars text-dark fs-2 pt-4"></i>
-           <img src="../../../assets/images/Logo-navbar.svg" class="w-75 text-center px-5 mb-3">
+          <div class="d-flex justify-content-around pt-3  ">
+            <i class="fa-solid fa-bars text-dark fs-2 "></i>
+            <img src="../../../assets/images/Logo-navbar.svg" class="w-75 text-center  px-5 ">
+          </div>
+       
         </button>
     </div>
-    <ul [ngClass]="isOpened?'text-start':'text-center'">
+    <hr>
+    <ul [ngClass]="isOpened?'text-start':'text-center'" class="ps-0">
         <ng-container *ngFor="let item of Menu">
             
-         <li *ngIf="item.isActive">
+         <li *ngIf="item.isActive" class="hover-div py-2">
         <a   [routerLink]="[item.link]"routerLinkActive="bg-main-transparent"class="text-dark">
-            <div class="">
-            <div class="" [ngClass]="isOpened ? 'ps-3' : 'ps-0'">
+          
+            <div  [ngClass]="isOpened ? 'ps-3' : 'ps-0'">
                 <span><i [class]=item.icon></i></span>
                 <span [ngClass]="isOpened?'d-inline':'d-none'">{{item.text}}</span>
             </div>
-            </div>
+           
         </a>
        </li>
+     <hr>
     </ng-container>
+  
     </ul>
 
 </section>

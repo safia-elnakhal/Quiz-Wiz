@@ -11,10 +11,14 @@ button{
     }
 }
 
+.height-side{
+  height: 48px;
+}
+
     ul{
-        padding: 10px;
+       
         li{
-            padding: 10px;
+          
             list-style: none;
           
             a{
@@ -42,17 +46,29 @@ button{
        
         
       }
-      
+      .hover-div{
+          transition: all 0.5s ease-in;
+      }
+      .hover-div:hover{
+                 background-color: rgba(250, 235, 215, 0.229);
+                 border-right:5px solid #0D1321 !important ;
+                          
+      }
+     
+  
     .bg-main-transparent{
         //padding: 10px 35px;
         border-radius: 8px;
-     
+      
           background-color: rgba(239, 155, 40, 0.3);    
           i{
             color:$second-color; 
             background-color:  $sidebar-icon-color;
      
-          }   
+          }  
+          
+          
+     
   
 
     
