@@ -1,0 +1,89 @@
+<section id="add-edit-group" class=" ">
+    <div class="container ">
+       <div class="row group-set ">
+        <div class="col-md-10 ps-3 pt-4  pb-3">
+            <h4 class="ps-4">Set up a new Question</h4>
+        </div>
+        <div class="col-md-1 text-center col-border " >
+            <button [mat-dialog-close]="data._id" cdkFocusInitial class="">
+                <i class="fa-solid fa-check fs-3 pt-4" ></i>
+            </button>
+     
+        </div>
+        <div class="col-md-1 col-border ">
+            <button (click)="onNoClick()">
+                <i class="fa-solid fa-xmark fs-3 pt-4"></i>
+            </button>
+
+        </div>
+       </div> 
+   
+       <div class="row mt-5">
+        <div class="col-md-12 ">
+            <div class="d-flex flex-column justify-content-center align-items-center">
+                <div class="input-group mb-3 ">
+                    <h1 class="input-group-text" id="basic-addon3">Title</h1>
+                    <h1 class="form-control">{{data.title}}</h1>
+                  </div>
+                  <div class="input-group mb-3 ">
+                    <h1 class="input-group-text" for="inputGroupSelect01">Description</h1>
+                    <h1 class="form-control">{{data.description}}</h1>
+                  </div>
+                  
+            </div>
+            <div class="row ">
+                <div class="col-md-6 px-5">
+                    <div class="input-group mb-3 ">
+                        <h1 class="input-group-text" for="inputGroupSelect01">A</h1>
+                        <h1 class="form-control">{{data.options.A}}</h1>
+                      </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="input-group mb-3 ">
+                        <h1 class="input-group-text" for="inputGroupSelect01">B</h1>
+                        <h1 class="form-control">{{data.options.B}}</h1>
+                      </div>
+                </div>
+              </div>
+              <div class="row ">
+                <div class="col-md-6  px-5">
+                    <div class="input-group mb-3 ">
+                        <h1 class="input-group-text" for="inputGroupSelect01">C</h1>
+                        <h1 class="form-control">{{data.options.C}}</h1>
+                      </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="input-group mb-3 ">
+                        <h1 class="input-group-text" for="inputGroupSelect01">D</h1>
+                        <h1 class="form-control">{{data.options.D}}</h1>
+                      </div>
+                </div>
+              </div>
+   
+              <div class="row ">
+                <div class="col-md-4 px-5">
+                    <div class="input-group mb-3">
+                        <h1 class="input-group-text" for="inputGroupSelect01">Answer</h1>
+                        <h1 class="form-control">{{data.answer}}</h1>
+                      </div>
+                </div>
+                <div class="col-md-4 ">
+                    <div class="input-group mb-3 ">
+                        <h1 class="input-group-text" for="inputGroupSelect01">Difficulty</h1>
+                        <h1 class="form-control">{{data.difficulty}}</h1>
+                      </div>
+                </div>
+                <div class="col-md-4 ">
+                    <div class="input-group mb-3 ">
+                        <h1 class="input-group-text" for="inputGroupSelect01">Type</h1>
+                        <h1 class="form-control">{{data.type}}</h1>
+                      </div>
+                </div>
+              </div>
+        </div>
+    
+       </div>
+    </div>
+  
+
+  </section>
