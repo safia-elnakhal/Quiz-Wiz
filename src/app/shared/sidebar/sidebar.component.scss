@@ -3,6 +3,7 @@
 
 section{
    border-right: 1px solid rgba(0, 0, 0, 0.2);
+ 
 button{
     border: none;
     background-color: transparent;
@@ -50,7 +51,7 @@ button{
           transition: all 0.5s ease-in;
       }
       .hover-div:hover{
-                 background-color: rgba(250, 235, 215, 0.229);
+                 background-color: rgba(250, 235, 215, 0.319);
                  border-right:5px solid #0D1321 !important ;
                           
       }
@@ -66,9 +67,15 @@ button{
             background-color:  $sidebar-icon-color;
      
           }  
+    div{
+      padding: 15px 0px;
+      background-color: rgba(250, 235, 215, 0.319);
+      border-right: 5px solid #0D1321;
+    }          
           
-          
-     
+     div:hover{
+      border-right: none;
+     }
   
 
     

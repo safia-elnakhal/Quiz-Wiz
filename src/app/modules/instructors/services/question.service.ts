@@ -16,4 +16,10 @@ export class QuestionService {
   onAddQuestion(data: any): Observable<any>{
     return this._HttpClient.post('question',data)
   }
+  onEditQuestion(data: any,id:any): Observable<any>{
+    return this._HttpClient.put(`question${id}`,data)
+  }
+  onGetQuestionById(id:any): Observable<any>{
+    return this._HttpClient.get(`question${id}`)
+  }
 }

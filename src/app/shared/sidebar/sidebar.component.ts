@@ -88,7 +88,7 @@ export class SidebarComponent {
     {
       text: 'Questions',
       link: '/dashboard/instructors/question-list',
-      icon: 'fa-solid fa-clock-rotate-left fs-4',
+      icon: 'fa-solid fa-person-circle-question fs-4',
       isActive: this.isInstructor()
     },
    
