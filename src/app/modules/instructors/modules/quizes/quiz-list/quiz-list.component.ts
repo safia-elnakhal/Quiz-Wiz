@@ -18,7 +18,7 @@ openAddQuizDialog(){
 
   const dialogRef = this._Dialog.open(AddEditQuizComponent, {
     width: '60%',
-    height: '50vh'
+    height: '65vh'
   });
   dialogRef.afterClosed().subscribe(result => {
     console.log('The dialog was closed');
