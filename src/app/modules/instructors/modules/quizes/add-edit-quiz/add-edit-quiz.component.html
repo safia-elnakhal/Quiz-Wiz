@@ -1,0 +1,142 @@
+<section id="add-edit-group" class=" ">
+  <div class="container ">
+     <div class="row group-set ">
+      <div class="col-md-10 ps-3 pt-4  pb-3">
+          <h4 class="ps-4">Set up a new quiz</h4>
+      </div>
+      <div class="col-md-1 text-center col-border " >
+          <button [mat-dialog-close]="quizForm.value" cdkFocusInitial class="">
+              <i class="fa-solid fa-check fs-3 pt-4" ></i>
+          </button>
+   
+      </div>
+      <div class="col-md-1 col-border ">
+          <button (click)="onNoClick()">
+              <i class="fa-solid fa-xmark fs-3 pt-4"></i>
+          </button>
+
+      </div>
+     </div> 
+     <form [formGroup]="quizForm" (ngSubmit)="onAddQuiz(quizForm)">
+     <div class="row mt-5">
+      <div class="col-md-12 ">
+        <h6 class="ps-5">Details:</h6>
+          <div class="d-flex flex-column justify-content-center align-items-center">
+              <div class="input-group mb-4 ">
+                  <span class="input-group-text" id="basic-addon3">Title</span>
+                  <input  
+                   type="name" formControlName="title" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                </div>
+          </div>
+ 
+      </div>
+  
+     </div>
+     <div class="row ms-4">
+      <div class="col-md-4 ">
+        <div class="input-group mb-3 ">
+            <label class="input-group-text" for="inputGroupSelect01">Duration(in minutes)</label>
+            <select formControlName="duration">
+              <option value="">Select</option>
+              <option value="10">10</option>
+              <option value="20">20</option>
+              <option value="30">30</option>
+            </select>
+            
+          </div>
+    </div>
+    <div class="col-md-4 ">
+      <div class="input-group mb-3 ">
+          <label class="input-group-text" for="inputGroupSelect01">No. of questions</label>
+          <select formControlName="questions_number">
+            <option value="">Select</option>
+            <option value="5">5</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+            <option value="25">25</option>
+          </select>
+          
+        </div>
+  </div>
+  <div class="col-md-4 ">
+    <div class="input-group mb-3 ">
+        <label class="input-group-text" for="inputGroupSelect01">Score per question</label>
+        <select formControlName="score_per_question">
+          <option value="">Select</option>
+          <option value="1">1</option>
+          <option value="5">5</option>
+          <option value="10">10</option>
+        </select>
+        
+      </div>
+</div>
+     </div>
+     <div class="row">
+      <div class="col-md-12 ">
+          <div class="d-flex flex-column justify-content-center align-items-center">
+              <div class="input-group mb-4 ">
+                  <span class="input-group-text" id="basic-addon3">Description</span>
+                  <input  
+                   type="name" formControlName="description" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                </div>
+          </div>
+ 
+      </div>
+  
+     </div>
+     <div class="row ms-4">
+      <div class="col-md-6 ">
+          <div class="">
+              <div class="input-group mb-4 ">
+                  <span class="input-group-text" id="basic-addon3">Schedule</span>
+                  <input  
+                   type="name" formControlName="schadule" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                </div>
+          </div>
+ 
+      </div>
+  
+     </div>
+     <div class="row ms-4">
+      <div class="col-md-4 ">
+        <div class="input-group mb-3 ">
+            <label class="input-group-text" for="inputGroupSelect01">Difficulty level</label>
+            <select formControlName="difficulty">
+              <option value="">Select</option>
+              <option value="easy">easy</option>
+              <option value="medium">medium</option>
+              <option value="difficult">difficult</option>
+            </select>
+            
+          </div>
+    </div>
+    <div class="col-md-4 ">
+      <div class="input-group mb-3 ">
+          <label class="input-group-text" for="inputGroupSelect01">Category type</label>
+          <select formControlName="type">
+            <option value="">Select</option>
+            <option value="BE">BE</option>
+            <option value="FE">FE</option>
+            <option value="AI">AI</option>
+            <option value="DB">DB</option>
+          </select>
+          
+        </div>
+  </div>
+  <div class="col-md-4 ">
+    <div class="input-group mb-3 ">
+        <label class="input-group-text" for="inputGroupSelect01">Group name</label>
+        <select formControlName="group">
+          <option value="">Select</option>
+          <option value="65c2bed779b859ea9320885f">Angular</option>
+         
+        </select>
+        
+      </div>
+</div>
+     </div>
+     </form>
+  </div>
+
+
+</section>

@@ -1,1 +1,48 @@
-<p>quiz-list-works</p>
+<section>
+    <div class="container mt-4 ">
+        <div class="row ">
+            <div class="col-md-6 d-flex justify-content-center">
+                <div class="p-5 i-border mx-3 text-center" (click)="openAddQuizDialog()">
+                    <i class="fa-solid fa-business-time fx-5"></i>
+                    <h5 class="fw-bold pt-2">Set up new a quiz</h5>
+                </div>
+                <div class="p-5  i-border mx-3  text-center"  routerLink="/dashboard/instructors/question-list" >
+                    <i class="fa-solid fa-clipboard-question fx-5"></i>
+                    <h5 class="fw-bold pt-2">Questions bank</h5>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="border p-2">     
+                       <div class="d-flex justify-content-between pt-3 pb-3 ">
+                    <span class="fw-bold">Upcoming 5 quizzes</span><span>Quiz directory<span class="mt-5 ps-2 "><i class="fa-solid fa-arrow-right-long"></i></span></span>
+                </div>
+                
+             <div class=" d-flex justify-content-start many-card">
+                <div>
+                    <img src="../../../../../assets/images/Quiz img.png" class="">
+                </div>
+                <div class="ps-2">
+                    <h5>Introduction to Computer programming</h5>
+                    <p>12/03/2023 | 09:00 AM</p>
+                    <p>No. student's enrolled: 32</p>
+                </div>
+                
+             </div>
+             <div class=" d-flex justify-content-start mt-2 many-card">
+                <div>
+                    <img src="../../../../../assets/images/Quiz img.png" class="">
+                </div>
+                <div class="ps-2">
+                    <h5>Introduction to Computer programming</h5>
+                    <p>12/03/2023 | 09:00 AM</p>
+                 
+                    <p>No. student's enrolled: 32</p>
+                  
+                 
+                </div>
+                
+             </div></div>
+            </div>
+        </div>
+    </div>
+</section>
