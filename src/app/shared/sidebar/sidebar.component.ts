@@ -94,7 +94,7 @@ export class SidebarComponent {
    
     {
       text: 'Results',
-      link: '/dashboard/manager/projects',
+      link: '/dashboard/instructors/results-list',
       icon: 'fa-solid fa-sheet-plastic fs-4',
       isActive:this.isInstructor()
     },

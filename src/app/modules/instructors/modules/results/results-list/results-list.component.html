@@ -1,0 +1,27 @@
+<section id="quizList" class="px-4 py-4 border mt-4 rounded p-2">
+    <div class="d-flex justify-content-between m-2 ">
+        <h3>Completed Quizzes</h3>
+    </div>
+   
+    <table class="table my-3">
+        <thead class="table-dark">
+            <tr>
+                <th class="col-md-2">Title</th>
+                <th class="col-md-2">Group name</th>
+                <th class="col-md-2">Type</th>
+                <th class="col-md-2">Difficulty</th>
+                <th class="col-md-2">Date</th>
+               
+              </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of tableOfAllQuizzes">
+                <td>{{item.quiz.title}}</td>
+                <td>{{item.quiz.group}}</td>
+                <td>{{item.quiz.type}}</td>
+                <td>{{item.quiz.difficulty}}</td>
+                <td>{{item.quiz.closed_at | date}}</td>
+              </tr>
+        </tbody>
+      </table>
+    </section>
