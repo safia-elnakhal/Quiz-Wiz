@@ -12,8 +12,8 @@ constructor(private _HttpClient:HttpClient) { }
 getLastQuizzesCompleted():Observable<any>{
   return this._HttpClient.get("quiz/result")
 }
-getGroupByID(id:any):Observable<any>{
-  return this._HttpClient.get(`group/${id}`)
+getGroups():Observable<any>{
+  return this._HttpClient.get(`group`)
 
 }
 
