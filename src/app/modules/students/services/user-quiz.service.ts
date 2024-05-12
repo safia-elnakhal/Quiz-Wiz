@@ -7,7 +7,15 @@ import { Observable } from 'rxjs';
 })
 export class UserQuizService {
 
-constructor(private _Httpclient:HttpClient) { }
+
+constructor(private _HttpClient:HttpClient) { }
+
+getIncommingQuizzes():Observable<any>{
+  return this._HttpClient.get('quiz/incomming')
+}
+
+
+
   onCompletedQuizzesStudent():Observable<any>{
     return this._Httpclient.get('quiz/completed')
   } 
