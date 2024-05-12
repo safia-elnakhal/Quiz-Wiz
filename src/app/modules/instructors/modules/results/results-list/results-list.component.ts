@@ -13,32 +13,35 @@ export class ResultsListComponent implements OnInit {
   tableOfGroups:any
   constructor(private _ResultsService:ResultsService, private _Toastr:ToastrService){}
   ngOnInit(): void {
+    this.getAllGroups();
     this.getAllQuizzes();
-      
   }
-  getAllQuizzes(){
+
+  getAllQuizzes() {
     this._ResultsService.getLastQuizzesCompleted().subscribe({
-      next:(res)=>{
-       this.tableOfAllQuizzes=res;
-        console.log(this.tableOfAllQuizzes)
+      next: (res) => {
+        this.tableOfAllQuizzes = res.map((quiz:any) => {
+          const group = this.tableOfGroups.find((group:any) => group._id === quiz.quiz.group);
+          const groupName = group ? group.name : 'N/A';
+          return { ...quiz, groupName };
+        });
+        console.log(this.tableOfAllQuizzes);
       },
-      error:(err)=>{
-        console.log(err)
+      error: (err) => {
+        console.log(err);
       }
-    })
-
+    });
   }
 
-  getAllGroups(){
-    this._ResultsService.getGroupByID(this.groupId).subscribe({
-      next:(res)=>{
-       this.tableOfGroups = res;
+  getAllGroups() {
+    this._ResultsService.getGroups().subscribe({
+      next: (res) => {
+        this.tableOfGroups = res;
       },
-      error:(err)=>{
-        console.log(err)
+      error: (err) => {
+        console.log(err);
       }
-    })
-
+    });
   }
 
 }
