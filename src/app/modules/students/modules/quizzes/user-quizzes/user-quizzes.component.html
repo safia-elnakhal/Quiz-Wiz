@@ -7,7 +7,7 @@
                  
                 </div></div>
             <div class="col-md-7 mt-5 i-border ">
-
+                <h4  class="fw-bold pt-3">Completed Quizzes</h4>
                 <table class="table my-3">
                     <thead class="table-dark">
                         <tr>
@@ -19,12 +19,12 @@
                           </tr>
                     </thead>
                     <tbody>
-                        <tr >
+                        <tr  *ngFor="let item of comletedQuizzes " >
                           
-                            <!-- <td>{{item.title}}</td>
+                            <td>{{item.title}}</td>
                             <td>{{item.description}}</td>
-                            <td>{{item.difficulty}}</td>
-                            <td>12/06/2024</td> -->
+                            <td>{{item.status}}</td>
+                            <td>{{item.duration}}</td>
                         
                           </tr>
             
