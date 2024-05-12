@@ -12,19 +12,24 @@
     </div>
     <hr>
     <ul [ngClass]="isOpened?'text-start':'text-center'" class="ps-0">
-        <ng-container *ngFor="let item of Menu">
-            
-         <li *ngIf="item.isActive" class="hover-div py-2">
-        <a   [routerLink]="[item.link]"routerLinkActive="bg-main-transparent"class="text-dark">
+        <ng-container *ngFor="let item of Menu"
+ >
+         <li *ngIf="item.isActive" 
+         [routerLink]="[item.link]"
+         routerLinkActive="bg-main-transparent"
+           class="hover-div py-2"
+           >
+        <a class="text-dark  ">
           
             <div  [ngClass]="isOpened ? 'ps-3' : 'ps-0'">
                 <span><i [class]=item.icon></i></span>
-                <span [ngClass]="isOpened?'d-inline':'d-none'">{{item.text}}</span>
+                <span  class="mb-3" [ngClass]="isOpened?'d-inline':'d-none'">{{item.text}}</span>
             </div>
            
         </a>
+        <hr >
        </li>
-     <hr>
+      
     </ng-container>
   
     </ul>

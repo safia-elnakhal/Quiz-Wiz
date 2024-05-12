@@ -12,11 +12,14 @@ import {MatButtonModule} from '@angular/material/button';
 import { MatTreeModule } from '@angular/material/tree';
 import { MatDialogModule } from '@angular/material/dialog';
 import {MatTabsModule} from '@angular/material/tabs';
+
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { DateAdapter, MatNativeDateModule } from '@angular/material/core';
-import {ClipboardModule} from '@angular/cdk/clipboard';
+
+
+
 @NgModule({
   declarations: [
     NavbarComponent,
@@ -36,11 +39,12 @@ import {ClipboardModule} from '@angular/cdk/clipboard';
     MatIconModule,
     MatMenuModule,
     MatTabsModule,
+
     MatDatepickerModule,
     MatFormFieldModule,
     MatInputModule,
-    MatNativeDateModule,
-    ClipboardModule
+
+
 
   ],
   exports:[
@@ -57,11 +61,13 @@ import {ClipboardModule} from '@angular/cdk/clipboard';
     MatDialogModule,
     MatMenuModule,
     MatTabsModule,
+
     MatDatepickerModule,
     MatFormFieldModule,
     MatInputModule,
     MatNativeDateModule,
-    ClipboardModule
+
+
   ]
 
 })

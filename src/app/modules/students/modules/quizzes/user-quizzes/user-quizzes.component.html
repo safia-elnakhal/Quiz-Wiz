@@ -1,1 +1,34 @@
-<p>user-quizzes works!</p>
+<section>
+    <div class="container-fluid mt-4 ">
+        <div class="row d-flex flex-nowrap">
+            <div class="col-md-4 d-flex justify-content-center mt-5">
+                <div class="p-5 i-border mx-3 text-center">
+                    <i class="fa-solid fa-business-time fx-5"></i>
+                 
+                </div></div>
+            <div class="col-md-7 mt-5 i-border ">
+                <h4  class="fw-bold pt-3">Completed Quizzes</h4>
+                <table class="table my-3">
+                    <thead class="table-dark">
+                        <tr>
+                            <th class="col-md-3"> Title</th>
+                            <th class="col-md-2">Type Field</th>
+                            <th class="col-md-2">Status</th>
+                            <th class="col-md-1">Duration</th>
+                          
+                          </tr>
+                    </thead>
+                    <tbody>
+                        <tr  *ngFor="let item of comletedQuizzes " >
+                          
+                            <td>{{item.title}}</td>
+                            <td>{{item.type}}</td>
+                            <td>{{item.status}}</td>
+                            <td>{{item.duration}}</td>
+                        
+                          </tr>
+            
+                    </tbody>
+                  </table>
+            </div>
+            </div></div></section>
