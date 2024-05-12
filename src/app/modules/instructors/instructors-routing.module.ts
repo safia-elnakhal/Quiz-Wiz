@@ -4,8 +4,8 @@ import { InstructorsComponent } from './components/instructors/instructors.compo
 import { GroupListComponent } from './modules/groups/group-list/group-list.component';
 import { StudentListComponent } from './modules/students/student-list/student-list.component';
 import { QuizListComponent } from './modules/quizes/quiz-list/quiz-list.component';
-import { QuestionListComponent } from './modules/questions/question-list/question-list.component';
 import { ResultsListComponent } from './modules/results/results-list/results-list.component';
+import { QuestionListComponent } from './modules/questions/question-list/question-list.component';
 
 const routes: Routes = [
 
