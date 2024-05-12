@@ -14,6 +14,7 @@
                 <h5>{{item.title}}</h5>
                 <p>{{item.schadule | date:'short'}}</p>
                 <p>Code: {{item.code}}</p>
+                <button class="btn text-end" [cdkCopyToClipboard]="item.code"><i class="fa-solid fa-copy copy-icon"></i></button>
             </div>
             
          </div>
