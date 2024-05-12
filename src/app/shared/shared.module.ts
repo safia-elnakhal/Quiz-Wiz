@@ -12,6 +12,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { MatTreeModule } from '@angular/material/tree';
 import { MatDialogModule } from '@angular/material/dialog';
 import {MatTabsModule} from '@angular/material/tabs';
+import {ClipboardModule} from '@angular/cdk/clipboard';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import {MatTabsModule} from '@angular/material/tabs';
     MatDialogModule,
     MatIconModule,
     MatMenuModule,
-    MatTabsModule
+    MatTabsModule,
+    ClipboardModule
   ],
   exports:[
     HttpClientModule,
@@ -46,7 +48,8 @@ import {MatTabsModule} from '@angular/material/tabs';
     MatIconModule,
     MatDialogModule,
     MatMenuModule,
-    MatTabsModule
+    MatTabsModule,
+    ClipboardModule
 
   ]
 
