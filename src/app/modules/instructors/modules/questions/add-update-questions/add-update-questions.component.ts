@@ -39,7 +39,6 @@ export class AddUpdateQuestionsComponent implements OnInit {
   }
 
   questionForm=new FormGroup({
-      _id:new FormControl(null),
       title: new FormControl('', Validators.required),
       description: new FormControl('', Validators.required),
       options: new FormGroup({
@@ -55,27 +54,6 @@ export class AddUpdateQuestionsComponent implements OnInit {
     });
 
   onSubmit(data:FormGroup){
-    console.log(data.value);
-    
-    data.value.id = this.QuestionId;
-    let myData = new FormData();
-    myData.append('answer', data.value.answer);
-    myData.append('description', data.value.description);
-    myData.append('difficulty', data.value.difficulty);
-    myData.append('instructor', data.value.instructor);
-    myData.append('options', data.value.options);
-    myData.append('title', data.value.title);
-    myData.append('type', data.value.type);
-    if (this.QuestionId) {
-      myData.append('_id', data.value.id);
-      this.EditQuestion(data);
-    } else {
-      this.AddQuestion(data);
-    }
-
-
-  }
-  AddQuestion(data:FormGroup){
     this._QuestionService.onAddQuestion(data).subscribe({
       next: (res) => {
         console.log(res);
@@ -90,23 +68,14 @@ export class AddUpdateQuestionsComponent implements OnInit {
         
       },
     });
+    
+
+
   }
-  EditQuestion(data:FormGroup){
-    this._QuestionService.onEditQuestion(data,this.QuestionId).subscribe({
-      next: (res) => {
-        console.log(res);
-        
-      },
-      error: (err) => {
-        console.log(err);
-        this._Toastr.error('Question', ' Added field');
-      },
-      complete: () => {
-        this._Toastr.success('Question', ' Added Success');
-        
-      },
-    });
+  AddQuestion(data:FormGroup){
+    
   }
+  
   getQuestionById(id: number) {
     this._QuestionService.onGetQuestionById(id).subscribe({
       next: (res: any) => {
