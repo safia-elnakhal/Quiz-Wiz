@@ -6,31 +6,18 @@
                 <span class="fw-bold">Upcoming 5 quizzes</span><span>Quiz directory<span class="mt-5 ps-2 "><i class="fa-solid fa-arrow-right-long"></i></span></span>
             </div>
             
-         <div class=" d-flex justify-content-start many-card">
+         <div class=" d-flex justify-content-start many-card my-2"  *ngFor="let item of tableOfQuiz">
             <div>
                 <img src="../../../../../assets/images/Quiz img.png" class="">
             </div>
             <div class="ps-2">
-                <h5>Introduction to Computer programming</h5>
-                <p>12/03/2023 | 09:00 AM</p>
-                <p>No. student's enrolled: 32</p>
+                <h5>{{item.title}}</h5>
+                <p>{{item.schadule | date:'short'}}</p>
+                <p>Code: {{item.code}}</p>
             </div>
             
          </div>
-         <div class=" d-flex justify-content-start mt-2 many-card">
-            <div>
-                <img src="../../../../../assets/images/Quiz img.png" class="">
-            </div>
-            <div class="ps-2">
-                <h5>Introduction to Computer programming</h5>
-                <p>12/03/2023 | 09:00 AM</p>
-             
-                <p>No. student's enrolled: 32</p>
-              
-             
-            </div>
-            
-         </div>
+         
         </div>
         <div class="col-md-4 card ms-5 pb-5" *ngIf="userRole === 'Instructor'">
             <div class="d-flex justify-content-between pt-3 pb-3 ">
@@ -57,11 +44,11 @@
             </div>
             
          <div class="d-flex justify-content-center many-card m-1" >
-            <div class="p-5 text-center myPointer" >
-                <i class="fa-solid fa-business-time fx-5"></i>
+            <div class="p-5 text-center myPointer" routerLink="/dashboard/student/quizzes-user">
+                <i  class="fa-solid fa-business-time fx-5"></i>
                 <h5 class="fw-bold pt-2">Quizzes</h5>
             </div>
-            <div class="p-5 text-center myPointer"   >
+            <div class="p-5 text-center myPointer"routerLink="/dashboard/student/results-user">
                 <i class="fa-solid fa-clipboard-question fx-5"></i>
                 <h5 class="fw-bold pt-2">Results</h5>
             </div>
