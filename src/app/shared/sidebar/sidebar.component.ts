@@ -45,19 +45,13 @@ export class SidebarComponent {
 
     let role = localStorage.getItem('userRole');
     console.log(role);
-    
     return role == 'Instructor'? true : false;
-  
   }
 
   isStudent(): boolean {
     let role = localStorage.getItem('userRole');
     console.log(role);
-    
     return role == 'Student'? true : false;
-  
-    
-    
   }
   
   Menu: Menu[] = [
@@ -65,7 +59,7 @@ export class SidebarComponent {
       text: 'Dashboard',
       link: '/dashboard/home',
       icon: 'fa-solid fa-house-laptop fs-4',
-      isActive: this.isInstructor()
+      isActive: this.isInstructor() || this.isStudent()
     },
     {
       text: 'Groups',
@@ -80,7 +74,7 @@ export class SidebarComponent {
       isActive:this.isInstructor()
     },
     {
-      text: 'Quizes',
+      text: 'Quizzes',
       link: '/dashboard/instructors/quiz-list',
       icon: 'fa-solid fa-clock-rotate-left fs-4',
       isActive: this.isInstructor()
@@ -97,6 +91,18 @@ export class SidebarComponent {
       link: '/dashboard/instructors/results-list',
       icon: 'fa-solid fa-sheet-plastic fs-4',
       isActive:this.isInstructor()
+    },
+    {
+      text: 'Quizzes',
+      link: '/dashboard/student/quizzes-user',
+      icon: 'fa-solid fa-sheet-plastic fs-4',
+      isActive:this.isStudent()
+    },
+    {
+      text: 'Results',
+      link: '/dashboard/student/results-user',
+      icon: 'fa-solid fa-sheet-plastic fs-4',
+      isActive:this.isStudent()
     },
  
   ]

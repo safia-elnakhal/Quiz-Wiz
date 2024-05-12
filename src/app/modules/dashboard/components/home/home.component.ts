@@ -7,6 +7,8 @@ import { HomeService } from 'src/app/modules/auth/services/home.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit{
+
+  userRole = localStorage.getItem('userRole')
   //tableOfStudent:Ihome | any;
   tableOfStudent:Ihome[]=[];
   //tableOfQuiz:any;
@@ -15,6 +17,7 @@ export class HomeComponent implements OnInit{
     this.getTopStudent()
     this.getTopQuizes()
   }
+
 getTopStudent(){
   this._HomeService.onGetTopStudent().subscribe({
     next:(res)=>{

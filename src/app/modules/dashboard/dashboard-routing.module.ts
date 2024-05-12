@@ -10,7 +10,7 @@ const routes: Routes = [
    {path: '', component: DashboardComponent, children: [
       {path:'',component:HomeComponent},
       { path: 'home', component: HomeComponent },
-      { path: 'students',canActivate:[studentGuard], loadChildren: () => import('../students/students.module').then(m => m.StudentsModule) },
+      { path: 'student',canActivate:[studentGuard], loadChildren: () => import('../students/students.module').then(m => m.StudentsModule) },
       { path: 'instructors', loadChildren: () => import('../instructors/instructors.module').then(m => m.InstructorsModule) },
 
     ]
