@@ -53,6 +53,17 @@ section{
 
 
     }
+    .btn-sign:hover{
+        
+        background-color:  $third-color;
+        padding: 15px 25px;
+        width: 128.69px;
+        height:54.8px ;
+    }
+    .btn-sign:hover span{
+        display: none;
+   
+    }
     .btn-sign i{
 
             font-size: 22px;
