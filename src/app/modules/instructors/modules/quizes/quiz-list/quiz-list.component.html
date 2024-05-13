@@ -57,11 +57,12 @@
                                       </p>
                                     </div>
                                       <div class="col-md-4 text-end ">
-                                    <p class="fw-bold" 
-                                    routerlink="/dashboard/instructor/view-quiz">
+                                    <a class="fw-bold" 
+                       [routerLink]="['/dashboard/instructors/view-quiz', item._id]"
+                                    >
                                     open
                                     <i class="fa-solid fa-circle-arrow-right fs-5 third-color"></i>
-                                    </p>
+                                      </a>
                                 </div>
                             
                             </div>
