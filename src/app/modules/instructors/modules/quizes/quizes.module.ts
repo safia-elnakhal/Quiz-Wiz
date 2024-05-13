@@ -15,11 +15,11 @@ import { CodedialogComponent } from './codedialog/codedialog.component';
   declarations: [
     QuizListComponent,
     AddEditQuizComponent,
-<<<<<<< HEAD
-    ViewQuizComponent
-=======
+
+    ViewQuizComponent,
+
     CodedialogComponent
->>>>>>> 03a71c39c761d49c8224c6a62cdc6b0b4ade6b2e
+
   ],
   imports: [
     CommonModule,
