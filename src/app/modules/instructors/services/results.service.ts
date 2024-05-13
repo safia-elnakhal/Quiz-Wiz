@@ -9,7 +9,7 @@ export class ResultsService {
 
 constructor(private _HttpClient:HttpClient) { }
 
-getLastQuizzesCompleted():Observable<any>{
+getResultsCompleted():Observable<any>{
   return this._HttpClient.get("quiz/result")
 }
 getGroups():Observable<any>{

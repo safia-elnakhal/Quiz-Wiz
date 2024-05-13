@@ -12,11 +12,13 @@ import {MatButtonModule} from '@angular/material/button';
 import { MatTreeModule } from '@angular/material/tree';
 import { MatDialogModule } from '@angular/material/dialog';
 import {MatTabsModule} from '@angular/material/tabs';
-
-import {MatDatepickerModule} from '@angular/material/datepicker';
-import {MatInputModule} from '@angular/material/input';
+import {ClipboardModule} from '@angular/cdk/clipboard';
+import {MatStepperModule} from '@angular/material/stepper';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatInputModule} from '@angular/material/input';
 import { DateAdapter, MatNativeDateModule } from '@angular/material/core';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 
 
 
@@ -39,13 +41,12 @@ import { DateAdapter, MatNativeDateModule } from '@angular/material/core';
     MatIconModule,
     MatMenuModule,
     MatTabsModule,
-
-    MatDatepickerModule,
+    ClipboardModule,
+    MatStepperModule,
     MatFormFieldModule,
+    MatRadioModule,
     MatInputModule,
-
-
-
+    MatDatepickerModule,
   ],
   exports:[
     HttpClientModule,
@@ -61,11 +62,13 @@ import { DateAdapter, MatNativeDateModule } from '@angular/material/core';
     MatDialogModule,
     MatMenuModule,
     MatTabsModule,
-
-    MatDatepickerModule,
+    ClipboardModule,
+    MatStepperModule,
     MatFormFieldModule,
+    MatRadioModule,
     MatInputModule,
-    MatNativeDateModule,
+    MatDatepickerModule,
+     MatNativeDateModule,
 
 
   ]
