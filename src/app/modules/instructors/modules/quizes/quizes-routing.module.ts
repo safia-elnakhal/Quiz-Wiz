@@ -5,7 +5,7 @@ import { ViewQuizComponent } from './view-quiz/view-quiz.component';
 
 const routes: Routes = [
   {path:'quiz-list',component:QuizListComponent},
-  {path:'view-quiz',component:ViewQuizComponent},
+  {path:'view-quiz/:_id',component:ViewQuizComponent},
 ];
 
 @NgModule({

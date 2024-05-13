@@ -14,7 +14,7 @@ const routes: Routes = [
    {path:'group-list',component:GroupListComponent},
    {path:"student-list",component:StudentListComponent},
    {path:'quiz-list',component:QuizListComponent},
-   {path:'view-quiz',component:ViewQuizComponent},
+   {path:'view-quiz/:_id',component:ViewQuizComponent},
    {path:'question-list',component:QuestionListComponent},
    {path:"results-list",component:ResultsListComponent},
    { path: 'instructors', loadChildren: () => import('../instructors/modules/groups/groups.module').then(m => m.GroupsModule) },
