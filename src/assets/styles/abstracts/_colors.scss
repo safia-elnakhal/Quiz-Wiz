@@ -3,3 +3,22 @@
 .third-color{
     color: $third-color;
 }
+.green-color{
+    color: $third-color !important;
+    border: 2px solid $third-color;
+
+}
+.green-color:hover{
+    color: white !important;
+    background-color: $third-color;
+}
+
+.orange-color{
+    color: $orange-color !important;
+    border: 2px solid $orange-color;
+
+}
+.orange-color:hover{
+    color: white !important;
+    background-color: $orange-color;
+}

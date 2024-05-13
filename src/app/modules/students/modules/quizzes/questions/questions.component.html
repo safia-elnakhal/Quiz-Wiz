@@ -1,0 +1,43 @@
+<section id="quiz">
+  <div class="container">
+      <div class="row mt-3">
+           <mat-stepper #stepper >
+              <mat-step *ngFor="let question of questions">
+                <form [formGroup]="firstFormGroup">
+                  <ng-template matStepLabel>Question</ng-template>
+                  <label id="demo-radio-group-label">{{question.title}}</label>
+                  <mat-radio-group aria-labelledby="demo-radio-group-label" class="demo-radio-group" formControlName="answer">
+                   <mat-radio-button  class="demo-radio-button" value="A">{{question.options.A}}</mat-radio-button>
+                   <mat-radio-button  class="demo-radio-button" value="B">{{question.options.B}}</mat-radio-button>
+                   <mat-radio-button  class="demo-radio-button" value="C">{{question.options.C}}</mat-radio-button>
+                   <mat-radio-button  class="demo-radio-button" value="D">{{question.options.D}}</mat-radio-button>           
+                  </mat-radio-group>
+                  <div>
+                    <button mat-button matStepperNext class="btn green-color m-2"
+                     (click)="submitAnswer(firstFormGroup,question._id)">Next</button>
+                     <button mat-button matStepperPrevious class="btn  m-2 orange-color">Previous</button>
+                  </div>
+                </form>
+              </mat-step>
+             
+              <mat-step>
+                <ng-template matStepLabel>Complete</ng-template>
+                <p class="fs-2">Done.</p>
+                <div>
+                  <button mat-button matStepperPrevious class="btn btn-primary m-2 orange-color">Back</button>
+                  <button mat-button (click)="resetForm()" (click)="stepper.reset()" class="btn red-btn m-2">Reset</button>
+                  <button mat-button (click)="submitAnswers()" class="btn btn-success m-2  green-color">Submit Answers</button>
+                </div>
+              </mat-step>
+            </mat-stepper> 
+            <div class="col-md-12 d-flex justify-content-end">
+              <div class=" border-5">
+               <button class="btn third-color timer"> 
+                {{ timing | async | date:'mm:ss' }}      
+                 </button>
+              </div>
+           </div>
+      </div>
+  </div>
+  </section>
+    

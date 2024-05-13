@@ -13,6 +13,11 @@ import { MatTreeModule } from '@angular/material/tree';
 import { MatDialogModule } from '@angular/material/dialog';
 import {MatTabsModule} from '@angular/material/tabs';
 import {ClipboardModule} from '@angular/cdk/clipboard';
+import {MatStepperModule} from '@angular/material/stepper';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatInputModule} from '@angular/material/input';
+
 
 @NgModule({
   declarations: [
@@ -33,7 +38,11 @@ import {ClipboardModule} from '@angular/cdk/clipboard';
     MatIconModule,
     MatMenuModule,
     MatTabsModule,
-    ClipboardModule
+    ClipboardModule,
+    MatStepperModule,
+    MatFormFieldModule,
+    MatRadioModule,
+    MatInputModule
   ],
   exports:[
     HttpClientModule,
@@ -49,7 +58,11 @@ import {ClipboardModule} from '@angular/cdk/clipboard';
     MatDialogModule,
     MatMenuModule,
     MatTabsModule,
-    ClipboardModule
+    ClipboardModule,
+    MatStepperModule,
+    MatFormFieldModule,
+    MatRadioModule,
+    MatInputModule
 
   ]
 
