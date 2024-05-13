@@ -1,5 +1,5 @@
 @import ".././../../../../../assets/styles/abstracts/home";
-
+@import ".././../../../../../assets/styles/abstracts/colors";
 
 i{
 
@@ -9,5 +9,8 @@ i{
     border: 1px solid rgba(0, 0, 0, 0.203);
     border-radius: 10px;
     cursor: pointer;
+   // 
+}
+.i-height{
     height:187.6px ;
 }
