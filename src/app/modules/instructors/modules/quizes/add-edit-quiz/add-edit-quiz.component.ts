@@ -1,9 +1,10 @@
 import { Component, Inject } from '@angular/core';
-import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MatDialogRef, MAT_DIALOG_DATA, MatDialog } from '@angular/material/dialog';
 import { DeleteStudentComponent } from '../../students/delete-student/delete-student.component';
 import { QuizService } from '../../../services/quiz.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
+import { CodedialogComponent } from '../codedialog/codedialog.component';
 
 @Component({
   selector: 'app-add-edit-quiz',
@@ -15,7 +16,8 @@ export class AddEditQuizComponent {
     public dialogRef: MatDialogRef<AddEditQuizComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private _QuizService:QuizService,
-    private _Toastr:ToastrService
+    private _Toastr:ToastrService,
+    public _Dialog: MatDialog,
   ) {}
   
   onNoClick(){
@@ -45,5 +47,19 @@ export class AddEditQuizComponent {
         this._Toastr.success('Quiz', ' Added Success');
       }
     })
+    }
+    sendCodeDialog(){
+
+      const dialogRef = this._Dialog.open(CodedialogComponent, {
+        //width: '60%',
+       // height: 'vh'
+      });
+      dialogRef.afterClosed().subscribe(result => {
+        console.log('The dialog was closed');
+       console.log(result)
+       if(result){
+      
+       }
+    });
     }
 }

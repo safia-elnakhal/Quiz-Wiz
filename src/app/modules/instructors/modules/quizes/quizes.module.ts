@@ -6,11 +6,20 @@ import { QuizListComponent } from './quiz-list/quiz-list.component';
 import { AddEditQuizComponent } from './add-edit-quiz/add-edit-quiz.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 
+import { ViewQuizComponent } from './view-quiz/view-quiz.component';
+import { CodedialogComponent } from './codedialog/codedialog.component';
+
+
 
 @NgModule({
   declarations: [
     QuizListComponent,
-    AddEditQuizComponent
+    AddEditQuizComponent,
+
+    ViewQuizComponent,
+
+    CodedialogComponent
+
   ],
   imports: [
     CommonModule,

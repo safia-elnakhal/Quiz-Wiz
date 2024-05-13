@@ -6,6 +6,7 @@ import { StudentListComponent } from './modules/students/student-list/student-li
 import { QuizListComponent } from './modules/quizes/quiz-list/quiz-list.component';
 import { ResultsListComponent } from './modules/results/results-list/results-list.component';
 import { QuestionListComponent } from './modules/questions/question-list/question-list.component';
+import { ViewQuizComponent } from './modules/quizes/view-quiz/view-quiz.component';
 
 const routes: Routes = [
 
@@ -13,6 +14,7 @@ const routes: Routes = [
    {path:'group-list',component:GroupListComponent},
    {path:"student-list",component:StudentListComponent},
    {path:'quiz-list',component:QuizListComponent},
+   {path:'view-quiz/:_id',component:ViewQuizComponent},
    {path:'question-list',component:QuestionListComponent},
    {path:"results-list",component:ResultsListComponent},
    { path: 'instructors', loadChildren: () => import('../instructors/modules/groups/groups.module').then(m => m.GroupsModule) },
