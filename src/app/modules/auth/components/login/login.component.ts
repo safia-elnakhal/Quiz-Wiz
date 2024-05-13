@@ -13,7 +13,6 @@ export class LoginComponent implements OnInit {
 
   hide:boolean=true;
   hiden:boolean=true;
-
   
   loginForm = new FormGroup({
     email: new FormControl(null, [Validators.required,
@@ -41,6 +40,9 @@ export class LoginComponent implements OnInit {
         localStorage.setItem('userToken', res.data.accessToken);
         localStorage.setItem('userRole', res.data.profile.role);
         localStorage.setItem('userName', res.data.profile.first_name);
+        localStorage.setItem('lastName', res.data.profile.last_name);
+        localStorage.setItem('email', res.data.profile.email);
+       // localStorage.setItem('role', res.data.profile.role);
         this._AuthService.getProfile();
         
       }, error: (err) => {

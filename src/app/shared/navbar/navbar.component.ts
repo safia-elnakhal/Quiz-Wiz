@@ -1,12 +1,15 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { Observable } from 'rxjs';
 import { AuthService } from 'src/app/modules/auth/service/Auth.service';
+
 interface Menu{
   text:string;
   link:string;
   icon:string;
   isActive:boolean;
+
 }
 
 @Component({
@@ -15,7 +18,10 @@ interface Menu{
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
-  constructor(private _AuthService:AuthService,private _ToastrService: ToastrService,private _Router:Router){}
+
+  constructor(private _AuthService:AuthService,private _ToastrService: ToastrService,private _Router:Router){
+  }
+
   userRole = localStorage.getItem('userRole')
   userName = localStorage.getItem('userName')
 
@@ -36,5 +42,9 @@ export class NavbarComponent {
     })
   }
 
-
+  // darkModeEnabled = false;
+  // toggleDarkMode() {
+  //   this.darkModeEnabled = !this.darkModeEnabled;
+  //   console.log('Dark mode enabled:', this.darkModeEnabled);
+  // }
 }

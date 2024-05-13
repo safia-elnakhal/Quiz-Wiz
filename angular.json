@@ -36,7 +36,9 @@
               "node_modules/ngx-spinner/animations/cube-transition.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/angular-dark-mode/angular-dark-mode.js"
+            ]
           },
           "configurations": {
             "production": {

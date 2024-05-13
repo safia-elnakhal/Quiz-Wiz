@@ -42,4 +42,29 @@ onAddQuiz(data:any){
     }
   })
   }
-}
+  clickEditQuiz(){
+  // console.log(quizId)
+    const dialogRef = this._Dialog.open(AddEditQuizComponent, {
+      width: '60%',
+      height: '65vh'
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+     console.log(result)
+     if(result){
+      this.onEditQuiz(result)
+     }
+  });
+  }
+  onEditQuiz(id:any){
+    this._QuizService.getQuizId(id).subscribe({
+      next:(res)=>{
+        console.log(res)
+      },
+      error:(err)=>{
+        console.log(err)
+      }
+    })
+  }
+  }
+

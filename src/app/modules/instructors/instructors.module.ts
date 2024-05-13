@@ -8,10 +8,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 
 
 
+
 @NgModule({
   declarations: [
     InstructorsComponent,
-    
 
   ],
   imports: [
