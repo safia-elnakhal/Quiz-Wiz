@@ -5,7 +5,7 @@
           <h4 class="ps-4">Set up a new quiz</h4>
       </div>
       <div class="col-md-1 text-center col-border " >
-          <button [mat-dialog-close]="quizForm.value" cdkFocusInitial class="">
+          <button [mat-dialog-close]="quizForm.value" cdkFocusInitial class="" (click)="sendCodeDialog()">
               <i class="fa-solid fa-check fs-3 pt-4" ></i>
           </button>
    
@@ -87,10 +87,19 @@
      <div class="row ms-4">
       <div class="col-md-6 ">
           <div class="">
-              <div class="input-group mb-4 ">
-                  <span class="input-group-text" id="basic-addon3">Schedule</span>
-                  <input  
-                   type="name" formControlName="schadule" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+              <div class="input-group mb-2 ">
+              
+                  <mat-form-field class="example-form-field">
+                    <mat-label>Schedule</mat-label>
+                    <input matInput [matDatepicker]="datepicker" formControlName="schadule">
+                    <mat-datepicker-toggle matIconSuffix [for]="datepicker"></mat-datepicker-toggle>
+                    <mat-datepicker #datepicker>
+                      <mat-datepicker-actions>
+                        <button mat-button matDatepickerCancel>Cancel</button>
+                        <button mat-raised-button  matDatepickerApply class="example-color" >Apply</button>
+                      </mat-datepicker-actions>
+                    </mat-datepicker>
+                  </mat-form-field>
                 </div>
           </div>
  
@@ -117,8 +126,7 @@
             <option value="">Select</option>
             <option value="BE">BE</option>
             <option value="FE">FE</option>
-            <option value="AI">AI</option>
-            <option value="DB">DB</option>
+            <option value="DO">DO</option>
           </select>
           
         </div>

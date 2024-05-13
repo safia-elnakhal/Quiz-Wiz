@@ -12,7 +12,13 @@ import {MatButtonModule} from '@angular/material/button';
 import { MatTreeModule } from '@angular/material/tree';
 import { MatDialogModule } from '@angular/material/dialog';
 import {MatTabsModule} from '@angular/material/tabs';
-import {ClipboardModule} from '@angular/cdk/clipboard';
+
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { DateAdapter, MatNativeDateModule } from '@angular/material/core';
+
+
 
 @NgModule({
   declarations: [
@@ -33,7 +39,13 @@ import {ClipboardModule} from '@angular/cdk/clipboard';
     MatIconModule,
     MatMenuModule,
     MatTabsModule,
-    ClipboardModule
+
+    MatDatepickerModule,
+    MatFormFieldModule,
+    MatInputModule,
+
+
+
   ],
   exports:[
     HttpClientModule,
@@ -49,7 +61,12 @@ import {ClipboardModule} from '@angular/cdk/clipboard';
     MatDialogModule,
     MatMenuModule,
     MatTabsModule,
-    ClipboardModule
+
+    MatDatepickerModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatNativeDateModule,
+
 
   ]
 
