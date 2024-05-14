@@ -25,7 +25,7 @@ import { DateAdapter, MatNativeDateModule } from '@angular/material/core';
 
 
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
-import { DARK_MODE_OPTIONS } from 'angular-dark-mode';
+ import { DARK_MODE_OPTIONS } from 'angular-dark-mode';
 
 
 @NgModule({
