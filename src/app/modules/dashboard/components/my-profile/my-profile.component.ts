@@ -22,8 +22,8 @@ export class MyProfileComponent implements OnInit {
   constructor(private _ProfileService: ProfileService, private _ToastrService: ToastrService,private _Router:Router) { }
   ngOnInit(): void {
     this.ProfileForm.patchValue(this.profileData);
-    this.ProfileForm.get('first_name')?.disable();
-    this.ProfileForm.get('email')?.disable();
+    //this.ProfileForm.get('first_name')?.disable();
+  //  this.ProfileForm.get('email')?.disable();
     this.ProfileForm.get('role')?.disable();
     this.ProfileForm.get('password')?.disable();
   }

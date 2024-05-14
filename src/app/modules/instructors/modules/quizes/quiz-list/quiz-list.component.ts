@@ -63,7 +63,7 @@ onAddQuiz(data:any){
   });
   }
   onEditQuiz(id:any){
-    this._QuizService.getQuizId(id).subscribe({
+    this._QuizService.onGetQuizById(id).subscribe({
       next:(res)=>{
         console.log(res)
       }
