@@ -101,5 +101,6 @@ onAddQuiz(data:any){
       }
     })
   }
+  
 }
 
