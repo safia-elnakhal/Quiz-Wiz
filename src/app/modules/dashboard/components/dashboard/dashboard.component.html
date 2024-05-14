@@ -1,4 +1,6 @@
-<div class="container-fluid">
+    <div class="position-relative" [ngClass]="{ 'dark-mode': darkModeEnabled }">
+        <p class="position-mode"><i class="fa-solid fa-moon ps-4 pe-2 mt-3"></i>Dark Mode<mat-slide-toggle  (click)="toggleDarkMode()" class="mt-2 ps-2 slide-toggle"> </mat-slide-toggle></p>
+        <div class="container-fluid" >
     <div class="row ">
         <div class="col-2 ps-0 ">
             <app-sidebar></app-sidebar>

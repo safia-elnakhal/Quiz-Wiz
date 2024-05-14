@@ -12,6 +12,8 @@ import { CodedialogComponent } from '../codedialog/codedialog.component';
   styleUrls: ['./add-edit-quiz.component.scss']
 })
 export class AddEditQuizComponent {
+  code:any;
+  quizId:any;
   constructor(
     public dialogRef: MatDialogRef<AddEditQuizComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
@@ -35,6 +37,9 @@ export class AddEditQuizComponent {
     group:new FormControl('',Validators.required)
   })
   onAddQuiz(data:FormGroup){
+    console.log(data.value)
+    data.value.id=this.quizId;
+   // let myData=new data;
     this._QuizService.clickAddNewQuiz(data).subscribe({
       next:(res)=>{
         console.log(res)
@@ -45,12 +50,17 @@ export class AddEditQuizComponent {
       },
       complete:()=>{
         this._Toastr.success('Quiz', ' Added Success');
+        this.sendCodeDialog()
       }
     })
+    }
+    getQuizById(){
+      
     }
     sendCodeDialog(){
 
       const dialogRef = this._Dialog.open(CodedialogComponent, {
+       // data:codeData.code
         //width: '60%',
        // height: 'vh'
       });
@@ -58,7 +68,7 @@ export class AddEditQuizComponent {
         console.log('The dialog was closed');
        console.log(result)
        if(result){
-      
+         this.onAddQuiz(result)
        }
     });
     }

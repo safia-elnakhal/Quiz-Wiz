@@ -1,13 +1,13 @@
 <section>
-    <div class="contant text-center m-2 p-4">
-        <div class="text-center">
+    <div class="contant text-center m-2 p-4" >
+        <div class="text-center " >
             <i class="fa-solid fa-circle-check pb-2"></i>
             <h5 class="p-1">Quiz was successfully created</h5>
-            <div class="code border rounded p-1">
+            <div class="code border rounded p-1" >
                 
-                <span class="me-3">CODE:</span><span>548656</span><i class="fa-solid fa-copy ps-5"></i>
+                <span class="me-3">CODE:</span><span>{{codeOfQuizes[codeOfQuizes.length - 1].code}}</span><i [cdkCopyToClipboard]="codeOfQuizes[codeOfQuizes.length - 1].code" class="fa-solid fa-copy ps-5"></i>
             </div>
-            <button class="green m-1 mt-3 p-3">Colse</button>
+            <button class="green m-1 mt-3 p-3"[mat-dialog-close]>Colse</button>
         </div>
     </div>
 </section>

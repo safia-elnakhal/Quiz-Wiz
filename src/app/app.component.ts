@@ -16,4 +16,9 @@ export class AppComponent {
       this.spinner.hide();
     }, 5000);
   }
+  darkModeEnabled = false;
+
+  toggleDarkMode() {
+    this.darkModeEnabled = !this.darkModeEnabled;
+  }
 }
