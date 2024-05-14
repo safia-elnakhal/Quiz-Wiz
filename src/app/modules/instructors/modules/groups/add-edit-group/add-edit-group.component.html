@@ -29,8 +29,14 @@
                   <div class="input-group mb-3 ">
                     <label class="input-group-text" for="inputGroupSelect01">List Students</label>
                     <select [(ngModel)]="data.first_name" class="form-select" id="inputGroupSelect01">
-                        <option *ngFor="let students of tableOfStudents" >{{students.first_name}}</option>
+                        <option *ngFor="let students of tableOfStudents" >{{students.email}}</option>
                       </select>
+                        <!-- <mat-select  [(ngModel)]="data.first_name" class="form-select" id="inputGroupSelect01">
+                           
+                            <mat-option  *ngFor="let students of tableOfStudents" >{{students.first_name}}</mat-option>
+                      
+                        </mat-select> -->
+                   
                   </div>
             </div>
    

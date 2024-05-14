@@ -11,4 +11,7 @@ export class ProfileService {
   getProfileInstructor(data:any):Observable<any>{
     return this._HttpClient.put('instructor',data)
   }
+  getProfileStudent(data:any):Observable<any>{
+    return this._HttpClient.put('student',data)
+  }
 }
