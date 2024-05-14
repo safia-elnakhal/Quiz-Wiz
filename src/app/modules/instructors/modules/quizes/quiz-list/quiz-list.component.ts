@@ -66,7 +66,11 @@ onAddQuiz(data:any){
     this._QuizService.getQuizId(id).subscribe({
       next:(res)=>{
         console.log(res)
-      })}
+      }
+    })
+  
+    }
+  
   getIncommingQuizzes(){
     this._UserQuizService.getIncommingQuizzes().subscribe({
       next:(res)=>{
@@ -81,8 +85,8 @@ onAddQuiz(data:any){
     })
   }
 
-  }
-    }
+  
+    
 
   getCompletedQuizzesStudent(){
     this._UserQuizService.onCompletedQuizzesStudent().subscribe({

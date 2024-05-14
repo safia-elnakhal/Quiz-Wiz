@@ -87,9 +87,6 @@ import { DARK_MODE_OPTIONS } from 'angular-dark-mode';
 
     MatSlideToggleModule
 
- 
-     MatNativeDateModule,
-
 
   ],
 
