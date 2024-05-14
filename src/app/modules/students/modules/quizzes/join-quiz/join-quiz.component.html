@@ -1,0 +1,38 @@
+<section id="add-edit-group" class=" ">
+    <div class="container ">
+       <div class="row group-set ">
+        <div class="col-md-10 ps-3 pt-4  pb-3">
+            <h4 class="ps-4">Set up a new Group</h4>
+        </div>
+        <div class="col-md-1 text-center col-border " >
+            <button [mat-dialog-close]="quizForm.value" cdkFocusInitial class="">
+                <i class="fa-solid fa-check fs-3 pt-4" ></i>
+            </button>
+     
+        </div>
+        <div class="col-md-1 col-border ">
+            <button (click)="onNoClick()">
+                <i class="fa-solid fa-xmark fs-3 pt-4"></i>
+            </button>
+
+        </div>
+       </div> 
+   <form [formGroup]="quizForm" (ngSubmit)="onSubmit(quizForm)">
+    <div class="row mt-5">
+    <div class="col-md-12 ">
+        <div class="d-flex flex-column justify-content-center align-items-center">
+            <div class="input-group mb-4 ">
+                <span class="input-group-text" id="basic-addon3">Quiz code</span>
+                <input formControlName="code"
+                 type="name" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+              </div>
+        </div>
+
+    </div>
+
+   </div></form>
+       
+    </div>
+  
+
+  </section>

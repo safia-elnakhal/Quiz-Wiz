@@ -3,19 +3,19 @@
     <div class="row">
         <div class="col-md-7 card ms-2">
             <div class="d-flex justify-content-between pt-3 pb-3 ">
-                <span class="fw-bold">Upcoming 5 quizzes</span><span>Quiz directory<span class="mt-5 ps-2 "><i class="fa-solid fa-arrow-right-long"></i></span></span>
+                <span class="fw-bold">Upcoming 5 quizzes</span><span class="text-center">Quiz directory <i class="fa-solid fa-arrow-right-long arrow-icon"></i> <span class="mt-5 ps-2 "></span></span>
             </div>
             
-         <div class=" d-flex justify-content-start many-card my-2"  *ngFor="let item of tableOfQuiz">
+         <div class=" d-flex justify-content-start many-card mb-2"  *ngFor="let item of tableOfQuiz">
             <div>
                 <img src="../../../../../assets/images/Quiz img.png" class="">
             </div>
             <div class="ps-2">
                 <h5>{{item.title}}</h5>
                 <p>{{item.schadule | date:'short'}}</p>
-                <p>Code: {{item.code}}</p>
-                <button class="btn text-end" [cdkCopyToClipboard]="item.code"><i class="fa-solid fa-copy copy-icon"></i></button>
+                <p>Code: {{item.code}} <button class="btn" [cdkCopyToClipboard]="item.code"><i class="fa-solid fa-copy copy-icon"></i></button></p>
             </div>
+           
             
          </div>
          

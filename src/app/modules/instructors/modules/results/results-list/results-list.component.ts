@@ -18,7 +18,7 @@ export class ResultsListComponent implements OnInit {
   }
 
   getAllQuizzes() {
-    this._ResultsService.getLastQuizzesCompleted().subscribe({
+    this._ResultsService.getResultsCompleted().subscribe({
       next: (res) => {
         this.tableOfAllQuizzes = res.map((quiz:any) => {
           const group = this.tableOfGroups.find((group:any) => group._id === quiz.quiz.group);

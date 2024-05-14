@@ -4,15 +4,20 @@ import { ToastrService } from 'ngx-toastr';
 import { AddEditQuizComponent } from '../add-edit-quiz/add-edit-quiz.component';
 import { MatDialog } from '@angular/material/dialog';
 import { QuizService } from '../../../services/quiz.service';
+import { UserQuizService } from 'src/app/modules/students/services/user-quiz.service';
 @Component({
   selector: 'app-quiz-list',
   templateUrl: './quiz-list.component.html',
   styleUrls: ['./quiz-list.component.scss']
 })
 export class QuizListComponent implements OnInit{
-  constructor(private _Router:Router, private _Toastr:ToastrService, public _Dialog: MatDialog, private _QuizService:QuizService){}
+  tableOfQuiz:any[]=[];
+  comletedQuizzes:any[]=[];
+
+  constructor(private _Router:Router, private _Toastr:ToastrService, public _Dialog: MatDialog, private _QuizService:QuizService,private _UserQuizService:UserQuizService){}
   ngOnInit(): void {
-    
+    this.getIncommingQuizzes();
+    this.getCompletedQuizzesStudent();
   }
 openAddQuizDialog(){
 
@@ -42,6 +47,7 @@ onAddQuiz(data:any){
     }
   })
   }
+
   clickEditQuiz(){
   // console.log(quizId)
     const dialogRef = this._Dialog.open(AddEditQuizComponent, {
@@ -60,11 +66,36 @@ onAddQuiz(data:any){
     this._QuizService.getQuizId(id).subscribe({
       next:(res)=>{
         console.log(res)
+      })}
+  getIncommingQuizzes(){
+    this._UserQuizService.getIncommingQuizzes().subscribe({
+      next:(res)=>{
+      
+        this.tableOfQuiz=res.slice(0,2);;
+        console.log(this.tableOfQuiz)
+
       },
       error:(err)=>{
         console.log(err)
       }
     })
   }
+
   }
+    }
+
+  getCompletedQuizzesStudent(){
+    this._UserQuizService.onCompletedQuizzesStudent().subscribe({
+      next:(res)=>{
+        this.comletedQuizzes=res
+            console.log(res);
+            
+      },error:()=>{
+
+      },complete:()=>{
+
+      }
+    })
+  }
+}
 

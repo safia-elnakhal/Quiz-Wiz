@@ -12,13 +12,21 @@ import {MatButtonModule} from '@angular/material/button';
 import { MatTreeModule } from '@angular/material/tree';
 import { MatDialogModule } from '@angular/material/dialog';
 import {MatTabsModule} from '@angular/material/tabs';
+
 import {MatDatepickerModule} from '@angular/material/datepicker';
-import {MatInputModule} from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import { DateAdapter, MatNativeDateModule } from '@angular/material/core';
+
 import {ClipboardModule} from '@angular/cdk/clipboard';
+import {MatStepperModule} from '@angular/material/stepper';
+
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatInputModule} from '@angular/material/input';
+import { DateAdapter, MatNativeDateModule } from '@angular/material/core';
+
+
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { DARK_MODE_OPTIONS } from 'angular-dark-mode';
+
 
 @NgModule({
   declarations: [
@@ -39,8 +47,12 @@ import { DARK_MODE_OPTIONS } from 'angular-dark-mode';
     MatIconModule,
     MatMenuModule,
     MatTabsModule,
+
     MatDatepickerModule,
+    MatStepperModule,
+
     MatFormFieldModule,
+    MatRadioModule,
     MatInputModule,
     MatNativeDateModule,
     ClipboardModule,
@@ -61,12 +73,23 @@ import { DARK_MODE_OPTIONS } from 'angular-dark-mode';
     MatDialogModule,
     MatMenuModule,
     MatTabsModule,
+
     MatDatepickerModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatNativeDateModule,
+
     ClipboardModule,
+    MatStepperModule,
+
+    MatFormFieldModule,
+    MatRadioModule,
+    MatInputModule,
+
+    MatNativeDateModule,
+
     MatSlideToggleModule
+
+ 
+     MatNativeDateModule,
+
 
   ],
 
