@@ -11,9 +11,10 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
   styleUrls: ['./view-quiz.component.scss']
 })
 export class ViewQuizComponent implements OnInit {
-   
+   item:any
   quizId:any;
   quizData:any;
+
   constructor(private _QuizService:QuizService ,private _ActivatedRoute:ActivatedRoute, public _Dialog: MatDialog){
     this.quizId = _ActivatedRoute.snapshot.params['_id'];
     console.log(this.quizId);
@@ -29,7 +30,7 @@ ngOnInit():void{
     this._QuizService.onGetQuizById(this.quizId).subscribe({
       next:(res)=>{
         this.quizData=res;
-        console.log(res);
+        console.log(this.quizId);
         
       }
     })
@@ -72,19 +73,21 @@ ngOnInit():void{
       group: quizDetails.group*/
     });
   }
-onEditQuiz(){
-  // console.log(quizId)
+  
+onEditQuiz(item:any){
+
       const dialogRef = this._Dialog.open(AddEditQuizComponent, {
+        data:item,
         width: '60%',
-        height: '65vh'
-      
+        height: '65vh',
+       
       });
       dialogRef.afterClosed().subscribe(result => {
         console.log('The dialog was closed');
        console.log(result)
        if(result){
-        
+     
        }
     });
     }
-}
+  }

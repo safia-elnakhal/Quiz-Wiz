@@ -1,4 +1,4 @@
-import { Component, Inject } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA, MatDialog } from '@angular/material/dialog';
 import { DeleteStudentComponent } from '../../students/delete-student/delete-student.component';
 import { QuizService } from '../../../services/quiz.service';
@@ -12,7 +12,7 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './add-edit-quiz.component.html',
   styleUrls: ['./add-edit-quiz.component.scss']
 })
-export class AddEditQuizComponent {
+export class AddEditQuizComponent implements OnInit {
   code:any;
   quizId:any;
   editQuiz:any;
@@ -23,9 +23,14 @@ export class AddEditQuizComponent {
     private _Toastr:ToastrService,
     public _Dialog: MatDialog,
     private _ActivatedRoute:ActivatedRoute,
+  
   ) {
-    this.quizId = this._ActivatedRoute.snapshot.params['_id']
-    console.log(this.quizId)
+    
+    // this.quizId = this._ActivatedRoute.snapshot.params['_id']
+    // console.log(this.quizId)
+  }
+  ngOnInit(): void {
+   this.clickEditQuiz(this.data)
   }
 
   onNoClick(){
@@ -60,11 +65,13 @@ export class AddEditQuizComponent {
       }
     })
     }
-    clickEditQuiz(id:any,data:any){
-      this._QuizService.editQuizId(id,data).subscribe({
+    clickEditQuiz(data:any){
+      this._QuizService.editQuizId(this.quizId,data).subscribe({
         next:(res)=>{
           console.log(res)
-          this.editQuiz=res.title
+          this.editQuiz=res.data.title
+          console.log(res.data.title)
+          
         },
         error:(err)=>{
           console.log(err)
