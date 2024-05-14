@@ -11,11 +11,12 @@ import { Router } from '@angular/router';
 })
 export class MyProfileComponent implements OnInit {
   instructorData: any;
+ userRole:string='';
   profileData:any={
     first_name:localStorage.getItem('userName'),
     last_name:localStorage.getItem('lastName'),
      email:localStorage.getItem('email'),
-     role:localStorage.getItem('userRole'),
+     role:localStorage.getItem('role'),
   }
 
   constructor(private _ProfileService: ProfileService, private _ToastrService: ToastrService,private _Router:Router) { }
@@ -42,8 +43,27 @@ first_name: new FormControl(null, [Validators.required]),
     myData.append('last_name',  this.last_name);
     myData.append('email', this.email);
     myData.append('role', this.role);*/
+    if(this.userRole ==='Instructor'){
+      const myData=this.ProfileForm.value;
+      this._ProfileService.getProfileInstructor(myData).subscribe({
+        next: (res) => {
+          console.log(res);
+          this.instructorData = res.data;
+          console.log(this.instructorData);
+          //this.getUser();
+        },
+        error: (err) => {
+          console.log(err);
+        },
+        complete: () => {
+          this._ToastrService.success('Updated','');
+          this._Router.navigate(["dashboard/home"]);
+   }
+    }
+   )}
+   else 
 
-    this._ProfileService.getProfileInstructor(myData).subscribe({
+    this._ProfileService.getProfileStudent(myData).subscribe({
       next: (res) => {
         console.log(res);
         this.instructorData = res.data;
@@ -54,11 +74,14 @@ first_name: new FormControl(null, [Validators.required]),
         console.log(err);
       },
       complete: () => {
-        this._ToastrService.success('Updated','');
+        this._ToastrService.success('Updated','updated profile successfully');
         this._Router.navigate(["dashboard/home"]);
  }
-  }
- )}
+  })
+   }
+    }
+
+
 
 //   getUser() {
 
@@ -72,6 +95,4 @@ first_name: new FormControl(null, [Validators.required]),
 //       });
 //     }
 //   }
-}
-
 
