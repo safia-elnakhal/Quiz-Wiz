@@ -10,4 +10,7 @@ export class QuizService {
   clickAddNewQuiz(data:any):Observable<any>{
     return this._HttpClient.post('quiz',data)
   }
+  onGetQuizById(id:any): Observable<any>{
+    return this._HttpClient.get(`quiz/${id}`)
+  }
 }

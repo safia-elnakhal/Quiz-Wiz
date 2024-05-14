@@ -72,4 +72,5 @@ onAddQuiz(data:any){
       }
     })
   }
+  
 }
