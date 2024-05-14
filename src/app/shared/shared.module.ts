@@ -22,8 +22,6 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatInputModule} from '@angular/material/input';
 import { DateAdapter, MatNativeDateModule } from '@angular/material/core';
-
-
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { DARK_MODE_OPTIONS } from 'angular-dark-mode';
 
