@@ -30,22 +30,24 @@ export class AddEditQuizComponent implements OnInit {
     // console.log(this.quizId)
   }
   ngOnInit(): void {
-   this.clickEditQuiz(this.data)
+   //this.clickEditQuiz(this.data)
+ 
   }
 
   onNoClick(){
     this.dialogRef.close();
   }
   quizForm=new FormGroup({
-    title:new FormControl('',Validators.required),
-    duration:new FormControl('',Validators.required),
-    questions_number:new FormControl('',Validators.required),
-    score_per_question:new FormControl('',Validators.required),
-    description:new FormControl('',Validators.required),
-    schadule:new FormControl('',Validators.required),
-    difficulty:new FormControl('',Validators.required),
-    type:new FormControl('',Validators.required),
-    group:new FormControl('',Validators.required)
+    title:new FormControl(this.data.title,Validators.required),
+    duration:new FormControl(this.data.duration,Validators.required),
+    questions_number:new FormControl(this.data.questions_number,Validators.required),
+    score_per_question:new FormControl(this.data.score_per_question,Validators.required),
+    description:new FormControl(this.data.description,Validators.required),
+    schadule:new FormControl(this.data.schadule,Validators.required),
+    difficulty:new FormControl(this.data.difficulty,Validators.required),
+    type:new FormControl(this.data.type,Validators.required),
+    group:new FormControl(this.data.group,Validators.required),
+
   })
   onAddQuiz(data:FormGroup){
     console.log(data.value)
@@ -65,20 +67,20 @@ export class AddEditQuizComponent implements OnInit {
       }
     })
     }
-    clickEditQuiz(data:any){
-      this._QuizService.editQuizId(this.quizId,data).subscribe({
-        next:(res)=>{
-          console.log(res)
-          this.editQuiz=res.data.title
-          console.log(res.data.title)
+    // clickEditQuiz(data:any){
+    //   this._QuizService.editQuizId(this.quizId,data).subscribe({
+    //     next:(res)=>{
+    //       console.log(res)
+    //       this.editQuiz=res.data.title
+    //       console.log(res.data.title)
           
-        },
-        error:(err)=>{
-          console.log(err)
-        }
+    //     },
+    //     error:(err)=>{
+    //       console.log(err)
+    //     }
 
-      })
-    }
+    //   })
+    // }
     // getQuizById(){
     //   this._QuizService.getQuizId(this.quizId).subscribe({
     //     next:(res)=>{
