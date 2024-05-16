@@ -11,13 +11,13 @@
         </button>
     </div>
     <hr>
-    <ul [ngClass]="isOpened?'text-start':'text-center'" class="ps-0">
-        <ng-container *ngFor="let item of Menu"
- >
+    <ul [ngClass]="isOpened?'text-start':'text-center'" class="ps-0 myPointer">
+      
+        <ng-container  *ngFor="let item of Menu">
          <li *ngIf="item.isActive" 
          [routerLink]="[item.link]"
          routerLinkActive="bg-main-transparent"
-           class="hover-div py-2"
+           class="" 
            >
         <a class="text-dark  ">
           
@@ -35,27 +35,3 @@
     </ul>
  
 </section>
-
-<!-- 
-<section>
-    <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
-
-  <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding>
-  
-    <button mat-icon-button disabled></button>
-    {{node.name}}
-  </mat-tree-node>
-
-  <mat-tree-node *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding>
-    <button mat-icon-button matTreeNodeToggle 
-            [attr.aria-label]="'Toggle ' + node.name">
-      <mat-icon class="mat-icon-rtl-mirror ms-4">
-         menu
-      </mat-icon>
-    </button>
-     <hr>
-    {{node.name}}
-  </mat-tree-node>
-</mat-tree>
-
-</section> -->
