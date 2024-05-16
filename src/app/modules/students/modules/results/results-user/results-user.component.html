@@ -7,24 +7,18 @@
         <thead class="table-dark">
           <tr>
             <th class="col">Quiz Name</th>
-            <th class="col">Date</th>
+            <th class="col">Duration</th>
             <th class="col">Score</th>
-            <th class="col">Full Mark</th>
+            <th class="col">FullMark</th>
           </tr>
         </thead>
         <tbody>
           <ng-container *ngFor="let item of tableOfResult">
-            <tr>
-              <td class="row">{{ item.quiz.title }}</td>
-              <td class="row">
-                {{ item.result.schadule }} - {{ item.result.closed_at }}
-              </td>
-              <td>{{ item.result.score }}</td>
-              <td>
-                {{item.quiz.score_per_question * item.quiz.questions_number}}
-              </td>
-            </tr>
-            <hr />
+           
+              <td>{{ item.quiz.title }}</td>
+              <td>{{ calculateDuration(item.result.started_at, item.result.finished_at) }}</td>
+              <td >{{ item.result.score }}</td>
+              <td >{{item.quiz.score_per_question * item.quiz.questions_number}}</td>
           </ng-container>
         </tbody>
       </table>
