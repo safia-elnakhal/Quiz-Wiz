@@ -5,7 +5,11 @@
 .dark-mode {
     background-color: #222222;
     color: #ffffff;
+    position: fixed;
+    min-height: 100vh; 
+    
 }
+
 .position-mode{
     position: absolute;
     left:15rem;
