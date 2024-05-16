@@ -5,7 +5,7 @@
              <div class="ms-4 mb-2">
                 <img src="../../../../../assets/images/Logo-white.svg" alt="">
              </div>
-                <h4 class="ms-4 mt-1 pb-1">Continue your learning journey with QuizWiz!</h4>
+                <h4 class="ms-4 mt-3 pb-3">Continue your learning journey with QuizWiz!</h4>
                 <div class="ms-4 ">
                     <button class="btn-icon me-5 text-center"  routerLink="/auth/login" [routerLinkActive]="['active-btn-class']">
                       <i class="fa-solid fa-user pt-2 "></i>
@@ -17,11 +17,11 @@
                     </button>
                 </div>
      
-            <form class="pt-2" [formGroup]="registerForm" (ngSubmit)="registerUser(registerForm)">
+            <form class="ms-4 mt-3" [formGroup]="registerForm" (ngSubmit)="registerUser(registerForm)">
                 <div class="">
                   <div class="row ">
                      <div class="col-md-6">
-                      <label class="text-white">Your first name</label>
+                      <label class="text-white">First name</label>
                       <div class="input-group mb-1 w-100">
                         <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-address-card text-white"></i></span>
                         <input type="text" class="form-control  text-white" formControlName="first_name" placeholder="Type your first name">
@@ -33,7 +33,7 @@
                       </div>
                      </div>
                      <div class="col-md-6">
-                      <label class="text-white">Your last name</label>
+                      <label class="text-white">Last name</label>
                       <div class="input-group mb-1 w-100">
                         <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-address-card text-white"></i></span>
                         <input type="text" class="form-control text-white"formControlName="last_name" placeholder="Type your last name">
@@ -47,7 +47,7 @@
                 
                 
                 </div>
-                <label class="text-white">Your email address</label>
+                <label class="text-white">Email address</label>
                 <div class="input-group mb-1">
                     <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-envelope text-white"></i></span>
                     <input type="email" class="form-control text-white" formControlName="email" placeholder="Type your email">
@@ -58,7 +58,7 @@
                   </div>
                  <div>
                 
-                  <label class="text-white">Your role</label><br>
+                  <label class="text-white">Role</label><br>
                       <mat-form-field class="w-100" >
                         <mat-label class="">choose your role</mat-label>
                         <mat-select [(value)]="selected" formControlName="role" class="">
@@ -75,7 +75,7 @@
                 
 
                  </div>
-                 <label for="password" class="mt-1 ps-2">Password</label>
+                 <label for="password" class=" ps-1">Password</label>
                             
                  <div class="input-group mb-1 w-100">
                      <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-lock text-white"></i></span>
@@ -104,103 +104,3 @@
     </div>
 </div>
 </section>
-
-<!--<section id="register">
-  <div class="container-fluid">
-      <div class="row">
-          <div class="col-md-7 col-lg-7 col-sm-12  mt-3">
-               <div class="ms-4 mb-2">
-                  <img src="../../../../../assets/images/Logo-white.svg" alt="">
-               </div>
-                  <h4 class="ms-4 mt-3 pb-3">Continue your learning journey with QuizWiz!</h4>
-                  <div class="ms-4 ">
-                      <button class="btn-icon me-5 text-center"  routerLink="/auth/login" [routerLinkActive]="['active-btn-class']">
-                        <i class="fa-solid fa-user pt-2 "></i>
-                       <p class="pt-2">Sign In</p> 
-                      </button>
-                      <button class="btn-icon text-center" routerLink="/auth/" [routerLinkActive]="['active-btn-class']">
-                        <i class="fa-solid fa-user-plus ps-1 pt-2"></i>
-                      <p class="pt-2 ">Sign Up</p> 
-                      </button>
-                  </div>
-                  <form class="pt-3" [formGroup]="registerForm" (ngSubmit)="registerUser(registerForm)">
-                   
-                    <div class=" ">
-                      <div class="d-flex justify-content-between">
-                        <div class="input-group  w-50">
-                            <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-address-card text-white"></i></span>
-                            <input type="text" class="form-control me-5 text-white" formControlName="first_name" placeholder="Type your first name">
-                           
-                            <div *ngIf="registerForm.controls['first_name'].errors&&registerForm.controls['first_name'].touched" class="w-100">
-                              <p class="text-danger" *ngIf="registerForm.controls['first_name'].errors['required']">first name is required</p>
-                              <p class="text-danger" *ngIf="registerForm.controls['first_name'].errors['first_name']">first name should be maxLength is 10</p>
-                            </div>
-                          </div>
-                          <div class="input-group  w-50">
-                            <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-address-card text-white"></i></span>
-                            <input type="text" class="form-control me-5 text-white" formControlName="last_name" placeholder="Type your last name">
-                           
-                            <div *ngIf="registerForm.controls['last_name'].errors&&registerForm.controls['last_name'].touched" class="w-100">
-                              <p class="text-danger" *ngIf="registerForm.controls['last_name'].errors['required']">first name is required</p>
-                              <p class="text-danger" *ngIf="registerForm.controls['last_name'].errors['last_name']">first name should be maxLength is 10</p>
-                            </div>
-                          </div>
-                      </div>
-                      <label class="text-white">Email address</label>
-                       <div class="input-group mb-3 w-100">
-                        <span class="input-group-text" id="basic-addon1"><i class="fa-regular fa-envelope text-white"></i></span>
-                        <input type="text" class="form-control text-white" formControlName="email" placeholder="Type your email">
-                       </div>
-                      <div *ngIf="registerForm.controls['email'].touched&&registerForm.controls['email'].errors" class=" w-100 ">
-                        <p class="text-error" *ngIf="registerForm.controls['email'].errors['email']">
-                          Email should be valid </p>
-                        <p class="text-error" *ngIf="registerForm.controls['email'].errors['required']">
-                          Email is required</p>
-    
-                      </div>
-                      <h5 class="text-white">Your role</h5>
-                      <mat-form-field class="w-100">
-                        <mat-label>choose your role</mat-label>
-                        <mat-select [(value)]="selected">
-                          <mat-option>None</mat-option>
-                          <mat-option value="Instructor">Instructor</mat-option>
-                          <mat-option value="Student">Student</mat-option>
-                          
-                        </mat-select>
-                      </mat-form-field>
-                    </div>
-                    <div class="password">
-          
-                      <label for="password" class="my-1 ps-2">Password</label>
-                      
-                          <div class="input-group mb-3 w-100">
-                              <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-lock text-white"></i></span>
-                              <input [type]="hide?'password':'text'" class="form-control text-white"formControlName="password" placeholder="Type your password">
-                              <a class="show-password text-white" (click)="this.hide= !this.hide">
-                                  <i class="fa-solid gray" [class]="hide?'fa-eye-slash':'fa-eye'"></i>
-                              </a>
-                          </div>
-                      
-                      <div *ngIf="registerForm.controls['password']?.errors && registerForm.controls['password']?.touched"
-                      class="w-100 ">
-                      <p class="text-error" *ngIf="registerForm.controls['password']?.errors?.['required']">
-                        Password is required</p>
-                      <p class="text-error" *ngIf="registerForm.controls['password']?.errors?.['pattern']">
-                        Password must be contain special character</p>
-                      </div>
-                  
-                    
-                    </div>
-                    <div class="col-md-6 ">
-                      <button class="btn-sign fw-bold" type="submit"> <span>Sign In </span>
-                        <i class="fa-solid fa-circle-check "></i>
-                      </button>
-                    </div>
-                  </form>
-          </div>
-          <div class="col-md-5 col-lg-5  col-sm-12 mt-5  d-flex justify-content-center ">
-            <img src="../../../../../assets/images/auth-img.svg"  alt="">
-          </div>
-      </div>
-  </div>
-</section>-->

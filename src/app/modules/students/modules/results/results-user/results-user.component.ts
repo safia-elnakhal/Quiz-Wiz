@@ -30,7 +30,13 @@ export class ResultsUserComponent {
     })
   }
 
-  
-
+  calculateDuration(startedAt: string, finishedAt: string): string {
+    const start = new Date(startedAt);
+    const end = new Date(finishedAt);
+    const durationInMs = end.getTime() - start.getTime();
+    const durationInHours = Math.floor(durationInMs / (1000 * 60 * 60));
+    const durationInMinutes = Math.floor((durationInMs % (1000 * 60 * 60)) / (1000 * 60));
+    return `${durationInHours} hrs ${durationInMinutes} mins`;
+  }
 
 }

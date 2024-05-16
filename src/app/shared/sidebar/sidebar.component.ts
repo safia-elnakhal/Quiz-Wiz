@@ -79,12 +79,12 @@ export class SidebarComponent {
       icon: 'fa-solid fa-clock-rotate-left fs-4',
       isActive: this.isInstructor()
     },
-    {
-      text: 'Questions',
-      link: '/dashboard/instructors/question-list',
-      icon: 'fa-solid fa-person-circle-question fs-4',
-      isActive: this.isInstructor()
-    },
+    // {
+    //   text: 'Questions',
+    //   link: '/dashboard/instructors/question-list',
+    //   icon: 'fa-solid fa-person-circle-question fs-4',
+    //   isActive: this.isInstructor()
+    // },
    
     {
       text: 'Results',
