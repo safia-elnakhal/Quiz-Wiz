@@ -12,9 +12,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { MatTreeModule } from '@angular/material/tree';
 import { MatDialogModule } from '@angular/material/dialog';
 import {MatTabsModule} from '@angular/material/tabs';
-
 import {MatDatepickerModule} from '@angular/material/datepicker';
-
 import {ClipboardModule} from '@angular/cdk/clipboard';
 import {MatStepperModule} from '@angular/material/stepper';
 
