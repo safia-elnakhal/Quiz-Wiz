@@ -3,7 +3,7 @@
     border: 1px solid rgba(0, 0, 0, 0.203);
     border-radius: 10px;
     cursor: pointer;
-   // 
+   
 }
 .round{
     border-radius: 10px;
@@ -20,4 +20,7 @@ button:hover{
     color: #0D1321;
     background-color: $second-color;
     border: 1px solid #0D1321 ;
+}
+.second-color{
+  background-color: $second-color;
 }
