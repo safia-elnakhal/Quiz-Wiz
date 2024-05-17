@@ -26,18 +26,23 @@
                     <input  [(ngModel)]="data.name"
                      type="name" class="form-control" id="basic-url" aria-describedby="basic-addon3">
                   </div>
-                  <div class="input-group mb-3 ">
+                  <!-- <div class="input-group mb-3 ">
                     <label class="input-group-text" for="inputGroupSelect01">List Students</label>
                     <select [(ngModel)]="data.first_name" class="form-select" id="inputGroupSelect01">
                         <option *ngFor="let students of tableOfStudents" >{{students.email}}</option>
                       </select>
-                        <!-- <mat-select  [(ngModel)]="data.first_name" class="form-select" id="inputGroupSelect01">
-                           
-                            <mat-option  *ngFor="let students of tableOfStudents" >{{students.first_name}}</mat-option>
-                      
-                        </mat-select> -->
+                     
                    
-                  </div>
+                  </div> -->
+                  <mat-form-field>
+                    <mat-label>List Students</mat-label>
+                    <mat-select [(ngModel)]="data.email" multiple>
+                    
+                        <mat-option [value]="" *ngFor="let students of tableOfStudents">{{students.email}}</mat-option>
+                      
+                    </mat-select>
+                  </mat-form-field>
+                  
             </div>
    
         </div>
