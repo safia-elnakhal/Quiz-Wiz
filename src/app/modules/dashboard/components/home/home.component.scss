@@ -1,4 +1,5 @@
 @import ".././../../../../assets/styles/abstracts/home";
+@import ".././../../../../assets/styles/abstracts/colors";
 .myPointer{
     cursor: pointer;
 }
@@ -11,6 +12,8 @@ i{
     border: 1px solid rgba(0, 0, 0, 0.203);
     border-radius: 10px;
     cursor: pointer;
+}
+.i-height{
     height:187.6px ;
 }
 
@@ -19,6 +22,16 @@ i{
     font-size: 25px !important;
 }
 .arrow-icon{
+    //padding-top: 30px;
     font-size: 20px !important;
    
+}
+.open-icon{
+    margin-left: 450px;
+    margin-bottom:5px;
+}
+.image{
+    width: 100%;
+    height: 100%;
+    
 }

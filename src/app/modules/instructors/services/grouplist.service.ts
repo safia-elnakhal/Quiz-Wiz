@@ -13,7 +13,11 @@ export class GrouplistService {
   getAllStudents():Observable<any>{
     return this._HttpClient.get('student')
   }
+<<<<<<< HEAD
   getAllStudentsWithOutGroup():Observable<any>{
+=======
+  getAllStudentsWithoutGroup():Observable<any>{
+>>>>>>> e2df11c1c9edd53c3d5afe81c004906259aed33d
     return this._HttpClient.get('student/without-group')
   }
   clickDeleteGroup(id:string):Observable<any>{

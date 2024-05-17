@@ -44,11 +44,12 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 /* Dark mode */
 .dark-mode {
-  --background-color: #222222; /* Dark mode background color */
-  --text-color: #ffffff; /* Dark mode text color */
-}
+   --background-color: #222222; /* Dark mode background color */
+   --text-color: #ffffff; /* Dark mode text color */
+   
+   }
 
-body {
-  background-color: var(--background-color);
-  color: var(--text-color);
-}
+// body {
+//   background-color: var(--background-color);
+//   color: var(--text-color);
+// }

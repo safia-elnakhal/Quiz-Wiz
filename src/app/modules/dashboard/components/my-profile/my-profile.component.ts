@@ -16,16 +16,13 @@ export class MyProfileComponent implements OnInit {
     first_name:localStorage.getItem('userName'),
     last_name:localStorage.getItem('lastName'),
      email:localStorage.getItem('email'),
-     role:localStorage.getItem('role'),
+     role:localStorage.getItem('userRole'),
   }
 
   constructor(private _ProfileService: ProfileService, private _ToastrService: ToastrService,private _Router:Router) { }
   ngOnInit(): void {
     this.ProfileForm.patchValue(this.profileData);
-    this.ProfileForm.get('first_name')?.disable();
-    this.ProfileForm.get('email')?.disable();
     this.ProfileForm.get('role')?.disable();
-    this.ProfileForm.get('password')?.disable();
   }
 
   hide: boolean = false;
@@ -33,16 +30,11 @@ export class MyProfileComponent implements OnInit {
 first_name: new FormControl(null, [Validators.required]),
     last_name: new FormControl(null, [Validators.required]),
      email: new FormControl(null, [Validators.required]),
-     password: new FormControl(null, [Validators.required]),
      role: new FormControl(null, [Validators.required])
   });
   onSubmit(data: FormGroup) {
     console.log(data.value);
     const myData=this.ProfileForm.value;
-   /* myData.append('first_name', this.first_name); 
-    myData.append('last_name',  this.last_name);
-    myData.append('email', this.email);
-    myData.append('role', this.role);*/
     if(this.userRole ==='Instructor'){
       const myData=this.ProfileForm.value;
       this._ProfileService.getProfileInstructor(myData).subscribe({
@@ -80,19 +72,4 @@ first_name: new FormControl(null, [Validators.required]),
   })
    }
     }
-
-
-
-//   getUser() {
-
-//     if (this.instructorData) {
-//       this.ProfileForm.patchValue({
-//         first_name: this.instructorData.first_name,
-//         last_name: this.instructorData.last_name, // Corrected typo here
-//         email: this.instructorData.email,
-//         role: this.instructorData.role,
-//         password: this.instructorData.password
-//       });
-//     }
-//   }
 

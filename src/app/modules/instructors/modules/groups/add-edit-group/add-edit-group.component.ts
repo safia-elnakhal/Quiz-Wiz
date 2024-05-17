@@ -1,7 +1,12 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { GrouplistService } from '../../../services/grouplist.service';
+<<<<<<< HEAD
 import { FormGroup, FormControl } from '@angular/forms';
+=======
+import { FormControl, FormGroup } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
+>>>>>>> e2df11c1c9edd53c3d5afe81c004906259aed33d
 @Component({
   selector: 'app-add-edit-group',
   templateUrl: './add-edit-group.component.html',
@@ -21,6 +26,7 @@ export class AddEditGroupComponent implements OnInit{
   constructor(private _GroupListService:GrouplistService,
     public dialogRef: MatDialogRef<AddEditGroupComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
+    private _Toastr:ToastrService
   ) {
     if(!data){
 
@@ -47,7 +53,11 @@ export class AddEditGroupComponent implements OnInit{
   }
 
   onGetAllStudents(){
+<<<<<<< HEAD
     this._GroupListService.getAllStudentsWithOutGroup().subscribe({
+=======
+    this._GroupListService.getAllStudentsWithoutGroup().subscribe({
+>>>>>>> e2df11c1c9edd53c3d5afe81c004906259aed33d
       next:(res)=>{
         this.tableOfStudents=res;
             console.log(this.tableOfStudents)

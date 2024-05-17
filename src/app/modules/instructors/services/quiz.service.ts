@@ -14,8 +14,9 @@ export class QuizService {
   getAllQuizes():Observable<any>{
     return this._HttpClient.get('quiz')
   }
-  getQuizId(id:any):Observable<any>{
-    return this._HttpClient.put(`quiz/${id}`,id)}
+  editQuizId(id:any,data:any):Observable<any>{
+    return this._HttpClient.put(`quiz/${id}`,data)
+  }
   
   onGetQuizById(id:any): Observable<any>{
     return this._HttpClient.get(`quiz/${id}`)
