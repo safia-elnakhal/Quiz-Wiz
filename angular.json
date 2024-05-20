@@ -36,7 +36,9 @@
               "node_modules/ngx-spinner/animations/cube-transition.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              
+            ]
           },
           "configurations": {
             "production": {

@@ -12,11 +12,16 @@ import {MatButtonModule} from '@angular/material/button';
 import { MatTreeModule } from '@angular/material/tree';
 import { MatDialogModule } from '@angular/material/dialog';
 import {MatTabsModule} from '@angular/material/tabs';
-
 import {MatDatepickerModule} from '@angular/material/datepicker';
-import {MatInputModule} from '@angular/material/input';
+import {ClipboardModule} from '@angular/cdk/clipboard';
+import {MatStepperModule} from '@angular/material/stepper';
+
 import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatInputModule} from '@angular/material/input';
 import { DateAdapter, MatNativeDateModule } from '@angular/material/core';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+
 
 
 
@@ -41,9 +46,14 @@ import { DateAdapter, MatNativeDateModule } from '@angular/material/core';
     MatTabsModule,
 
     MatDatepickerModule,
-    MatFormFieldModule,
-    MatInputModule,
+    MatStepperModule,
 
+    MatFormFieldModule,
+    MatRadioModule,
+    MatInputModule,
+    MatNativeDateModule,
+    ClipboardModule,
+    MatSlideToggleModule,
 
 
   ],
@@ -63,12 +73,20 @@ import { DateAdapter, MatNativeDateModule } from '@angular/material/core';
     MatTabsModule,
 
     MatDatepickerModule,
+
+    ClipboardModule,
+    MatStepperModule,
+
     MatFormFieldModule,
+    MatRadioModule,
     MatInputModule,
+
     MatNativeDateModule,
 
+    MatSlideToggleModule
 
-  ]
+
+  ],
 
 })
 export class SharedModule {

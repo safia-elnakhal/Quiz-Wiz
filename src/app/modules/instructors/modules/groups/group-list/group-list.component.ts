@@ -26,7 +26,7 @@ getAllGroupList(){
   this._GroupListService.getAllGroups().subscribe({
     next:(res)=>{
     
-      this.tableOfGroupList=res.slice(0,5);
+      this.tableOfGroupList=res
       console.log(this.tableOfGroupList)
     },
     error:(err)=>{

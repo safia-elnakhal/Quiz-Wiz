@@ -1,0 +1,33 @@
+@import"../../../../../../assets/styles/abstracts/colors";
+@import"../../../../../../assets/styles/abstracts/variables";
+.demo-radio-group {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+    align-items: flex-start;
+  }
+  
+  .demo-radio-button {
+    margin: 5px;
+    
+  }
+  .mat-mdc-form-field {
+    margin-top: 16px;
+  }
+  .timer{
+    font-size: 2.5rem;
+    border: 5px solid $third-color;
+  }
+  .mat-step-icon-selected {
+    background-color: $third-color !important;
+    color: var(--mat-stepper-header-selected-state-icon-foreground-color);
+}
+.red-btn{
+  color: rgb(156, 22, 22) !important;
+  border: 2px solid rgb(156, 22, 22) !important;
+  
+}
+.red-btn:hover{
+  color: white !important;
+  background-color: rgb(156, 22, 22) !important; ;
+}

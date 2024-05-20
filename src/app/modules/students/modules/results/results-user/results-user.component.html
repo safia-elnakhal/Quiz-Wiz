@@ -1,1 +1,26 @@
-<p>results-user works!</p>
+    <section id="quizList" class="px-4 py-4 border mt-4 rounded p-2">
+      <div class="d-flex justify-content-between m-2 ">
+          <h3>Results</h3>
+      </div>
+     
+      <table class="table my-3">
+          <thead class="table-dark">
+              <tr>
+                  <th class="col-md-2">Quiz name</th>
+                  <th class="col-md-2">Duration</th>
+                  <th class="col-md-2">Score</th>
+                  <th class="col-md-2">Full-mark</th>
+                  
+                 
+                </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let item of tableOfResult">
+                <td>{{ item.quiz.title }}</td>
+                <td>{{ item.result.finished_at | date:'shortTime'}}</td>
+                <td >{{ item.result.score }}</td>
+                <td >{{item.quiz.score_per_question * item.quiz.questions_number}}</td>
+                </tr>
+          </tbody>
+        </table>
+      </section> 

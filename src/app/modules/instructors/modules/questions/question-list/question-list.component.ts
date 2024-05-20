@@ -84,7 +84,7 @@ openAddQuestionDialog():void {
 openQuestionDetailsDialog(item:any):void {
 
   const dialogRef = this._Dialog.open(QuestionDetailsComponent, {
-   data:item,
+    data:item,
     width: '50%',
     height: "65vh",
   });

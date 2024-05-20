@@ -56,14 +56,13 @@
                                         No. student's enrolled: {{ item.participants }}
                                       </p>
                                     </div>
-                                      <div class="col-md-4 text-end ">
-                                    <a class="fw-bold" 
-                       [routerLink]="['/dashboard/instructors/view-quiz', item._id]"
-                                    >
-                                    open
-                                    <i class="fa-solid fa-circle-arrow-right fs-5 third-color"></i>
-                                      </a>
-                                </div>
+                                    <div class="open-icon">
+                                      <a class="fw-bold text-decoration-none text-black" [routerLink]="['/dashboard/instructors/view-quiz', item._id]">
+                                      open
+                                      <i class="fa-solid fa-circle-arrow-right fs-5 third-color"></i>
+                                        </a>
+                                      
+                                  </div>
                             
                             </div>
                         </div>

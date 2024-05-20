@@ -10,7 +10,16 @@ export class QuizService {
   clickAddNewQuiz(data:any):Observable<any>{
     return this._HttpClient.post('quiz',data)
   }
+
+  getAllQuizes():Observable<any>{
+    return this._HttpClient.get('quiz')
+  }
+  editQuizId(id:any,data:any):Observable<any>{
+    return this._HttpClient.put(`quiz/${id}`,data)
+  }
+  
   onGetQuizById(id:any): Observable<any>{
     return this._HttpClient.get(`quiz/${id}`)
+
   }
 }

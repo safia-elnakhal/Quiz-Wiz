@@ -37,3 +37,19 @@ $quizwiz-theme: mat.define-light-theme((
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+:root {
+  --background-color: #ffffff; /* Light mode background color */
+  --text-color: #000000; /* Light mode text color */
+}
+
+/* Dark mode */
+.dark-mode {
+   --background-color: #222222; /* Dark mode background color */
+   --text-color: #ffffff; /* Dark mode text color */
+   
+   }
+
+// body {
+//   background-color: var(--background-color);
+//   color: var(--text-color);
+// }
